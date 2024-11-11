@@ -73,7 +73,7 @@ export default defineComponent({
     `)
 
     const tage = computed(() => [t('monday'), t('tuesday'), t('wednesday'), t('thursday')/*, t('friday')*/])
-    const stunden = ['13:00', '14:00', '15:00']
+    const stunden = ['13:00-14:00', '14:00-15:00', '15:00-16:00']
 
     const sprechstunden = computed(() =>
     {
