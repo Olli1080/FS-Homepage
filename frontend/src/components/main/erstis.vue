@@ -136,6 +136,7 @@ export default defineComponent({
     const categories = computed(() => [t('event'), t('location')])
 
     const stunden = computed(() => [
+      /*
       `08.10 | ${t('ab')} 17:00`,
       '09.10 | 19:00',
       '16.10 | 19:00',
@@ -146,12 +147,19 @@ export default defineComponent({
       '24.10 | 19:00',
       '30.10 | 17:00',
       '08.11 - 10.11'
+      */
+      '23.04 | 12:00',
+      '28.04 | 18:15',
+      '29.04 | 19:00',
+      '05.06 | 18:00'
     ])
 
     const sprechstunden = computed(() =>
     {
       let a: TableRow = {}
-      let b: TableRow = {} //Wintersemestertermine
+      let b: TableRow = {}
+      //Wintersemestertermine
+      /*
       a[0] = [t('Erstsemestergrillen')]
       a[1] = ['1. ' + t('Kneipentour')],
       a[2] = ['1. ' + t('buddy')],
@@ -176,19 +184,22 @@ export default defineComponent({
       b[9] = [t('liste')]
 
 
-
+*/
       //Sommersemestertermine
-/*      a[0] = ['1. ' + t('Kneipentour')]
-      a[1] = [t('Spieleabend')],
-      a[2] = [
+      a[0] = [t('Führung')]
+      a[1] = [t('Sitzung')],
+      a[2] = [t('Spieleabend')],
+      a[3] = [
         t('shake')
       ],
 
 
-      b[0] = [t('Anmeldung')],
-      b[1] = ['H20 | NW2'],
-      b[2] = [t("Anmeldung")];
-*/
+      b[0] = ['Direkt im Anschluss an die Einführungsveranstaltung B.Sc. Informatik; Es gibt Erstitüten!'],
+      b[1] = ['S80 | NW2, Fachschaftssitzung zum Reinschnuppern'],
+      b[2] = ['H20 | NW2'],
+      b[3] = ['Weitere Informationen im e-learning Kurs der Fachschaft']
+
+
       let z: Table = {}
       z[0] = a
       z[1] = b
