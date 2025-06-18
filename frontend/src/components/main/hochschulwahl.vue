@@ -470,19 +470,20 @@ export default defineComponent({
 
     const v =
     [
-      "Martin Treutterer",
-      "Michael Ziegler",
       "Isabel Hirschmann",
-      "Scarlett Rasa",
       "Antonia Richthammer",
-      "Paul Czerwik",
-      "Moritz Quindt",
-      "Yannick Schieder",
-      "Natascha May",
-      "Jana Zanter",
       "Wilhelm Groba",
-      "Christian Zanter",
-      "Ghofrane Kamoun"
+      "Alexander Benzel",
+      "Marie Lauterbach",
+      "Sarah Petrik",
+      "Jan Wehner",
+      "Paul Czerwik",
+      "Niklas Brütting",
+      "Sven Schnappauf",
+      "Jana Zanter",
+      "Sonja Fleischmann",
+      "Dominik Lieder",
+      "Mortiz Quindt"
     ]
     return { v, stupaWahl, t, getKeyPath: VueRoutes.getKeyPath, extern, kontakt }
   }
