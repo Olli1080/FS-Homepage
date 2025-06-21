@@ -474,7 +474,6 @@ export default defineComponent({
       "Antonia Richthammer",
       "Wilhelm Groba",
       "Alexander Benzel",
-      "Marie Lauterbach",
       "Sarah Petrik",
       "Jan Wehner",
       "Paul Czerwik",
