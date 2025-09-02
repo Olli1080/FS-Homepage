@@ -136,22 +136,22 @@ export default defineComponent({
     const categories = computed(() => [t('event'), t('location')])
 
     const stunden = computed(() => [
-      /*
-      `08.10 | ${t('ab')} 17:00`,
-      '09.10 | 19:00',
+      `07.10 | ${t('ab')} 17:00`,
+      '08.10 | 19:00',
+      '15.10 | 19:00',
       '16.10 | 19:00',
-      '17.10 | 19:00',
+      '20.10 | 19:00',
       '21.10 | 19:00',
       '22.10 | 19:00',
       '23.10 | 19:00',
-      '24.10 | 19:00',
-      '30.10 | 17:00',
-      '08.11 - 10.11'
-      */
+      '29.10 | 17:00',
+      '07.11 - 09.11'
+      /*
       '23.04 | 12:00',
       '28.04 | 18:15',
       '29.04 | 19:00',
       '05.06 | 18:00'
+      */
     ])
 
     const sprechstunden = computed(() =>
@@ -159,7 +159,6 @@ export default defineComponent({
       let a: TableRow = {}
       let b: TableRow = {}
       //Wintersemestertermine
-      /*
       a[0] = [t('Erstsemestergrillen')]
       a[1] = ['1. ' + t('Kneipentour')],
       a[2] = ['1. ' + t('buddy')],
@@ -184,7 +183,7 @@ export default defineComponent({
       b[9] = [t('liste')]
 
 
-*/
+/*
       //Sommersemestertermine
       a[0] = [t('Führung')]
       a[1] = [t('Sitzung')],
@@ -198,7 +197,7 @@ export default defineComponent({
       b[1] = ['S80 | NW2, Fachschaftssitzung zum Reinschnuppern'],
       b[2] = ['H20 | NW2'],
       b[3] = ['Weitere Informationen im e-learning Kurs der Fachschaft']
-
+*/
 
       let z: Table = {}
       z[0] = a
@@ -348,8 +347,8 @@ export default defineComponent({
           habt, schaut doch einfach mal in unserem Büro (NW II, zwischen H 20 \
           und S 78) vorbei, dann könnt ihr euch selbst ein Bild von der schönen \
           Campus-Uni Bayreuth und der dort angesiedelten Fachschaft machen. \
-          Oder, falls ihr von weiter herkommt oder die Pandemie gerade keinen \
-          persönlichen Kontakt zulässt, schreibt uns einfach eine Mail \
+          Oder, falls ihr von weiter herkommt oder sonst Unterstützung benötigt \
+          schreibt uns einfach eine Mail \
           ({mail}).",
   "fachschaft": "Fachschaft",
   "sdf": "Schlacht der Fakultäten",
@@ -396,7 +395,7 @@ export default defineComponent({
           Over foods and drinks you're able to get into conversations with other students.",
   "h[7]": "Freshers breakfast",
   "p[7]": "A small but fine breakfast in the uni at the expense of the student council.",
-  "dates": "Dates for the winter semester 24/25",
+  "dates": "Dates for the winter semester 25/26",
   "event": "Event",
   "location": "Location",
   "ab": "from",
@@ -421,8 +420,8 @@ export default defineComponent({
   "p[n]": "As you can see there's a lot of sound reasons to go to Bayreuth and we \
           as the student council will do our best to make your entry to your studies as easy as possible. \
           If there are any open questions feel free to visit our office (NW II, between H 20 \
-          and S 78) where you can paint yourself a picture of the beautifull campus uni Bayreuth and the here settled student council. \
-          Or if you're coming from farther away or if theirs no possibility of direct contact due to the pandemic leave us a mail ({mail}).",
+          and S 78) where you can paint yourself a picture of the beautiful campus uni Bayreuth and the here settled student council. \
+          Or if you're coming from farther away or if there's no possibility of direct contact leave us a mail ({mail}).",
   "fachschaft": "Student council",
   "sdf": "Battle of the faculties",
   "frühstück": "Breakfast",
