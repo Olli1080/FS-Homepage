@@ -319,7 +319,7 @@ export default defineComponent({
   "h[7]": "Erstifrühstück",
   "p[7]": "Ein kleines, aber feines Frühstück in der Uni auf Kosten der \
           Fachschaft.",
-  "dates": "Termine für das Wintersemester 24/25",
+  "dates": "Termine für das Wintersemester 25/26",
   "event": "Veranstaltung",
   "location": "Ort",
   "ab": "ab",
