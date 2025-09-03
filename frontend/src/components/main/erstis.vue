@@ -328,7 +328,7 @@ export default defineComponent({
   "ab": "ab",
   "Erstsemestergrillen": "Erstsemestergrillen",
   "Kneipentour": "Kneipentour",
-  "Tour": "Einführungsveranstaltung und Campustour"
+  "Tour": "Einführungsveranstaltung und Campustour",
   "Einführung": "Einführung",
   "Vorstellung": "Vorstellung der Fachschaft",
   "Führung": "Campusführung",
