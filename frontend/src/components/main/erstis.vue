@@ -138,6 +138,7 @@ export default defineComponent({
     const stunden = computed(() => [
       `07.10 | ${t('ab')} 17:00`,
       '08.10 | 19:00',
+      '13.10 | 16:15 - 17:00',
       '15.10 | 19:00',
       '16.10 | 19:00',
       '20.10 | 19:00',
@@ -161,26 +162,28 @@ export default defineComponent({
       //Wintersemestertermine
       a[0] = [t('Erstsemestergrillen')]
       a[1] = ['1. ' + t('Kneipentour')],
-      a[2] = ['1. ' + t('buddy')],
-      a[3] = ['2. ' + t('Kneipentour')],
-      a[4] = [t('Sitzung')],
-      a[5] = [t('Spieleabend')],
-      a[6] = ['2. ' + t('buddy')],
-      a[7] = [t('shake')],
-      a[8] = [t('sdf')],
-      a[9] = [t('Wochenende')],
+      a[2] = [t('Tour')],
+      a[3] = ['1. ' + t('buddy')],
+      a[4] = ['2. ' + t('Kneipentour')],
+      a[5] = [t('Sitzung')],
+      a[6] = [t('Spieleabend')],
+      a[7] = ['2. ' + t('buddy')],
+      a[8] = [t('shake')],
+      a[9] = [t('sdf')],
+      a[10] = [t('Wochenende')],
 
 
       b[0] = [t('nw2Innen')],
       b[1] = [t("Anmeldung")],
-      b[2] = ['H20 | NW2'],
-      b[3] = [t("Anmeldung")],
-      b[4] = ['H20 | NW2'],
+      b[2] = ['H17 | NW2'],
+      b[3] = ['H20 | NW2'],
+      b[4] = [t("Anmeldung")],
       b[5] = ['H20 | NW2'],
       b[6] = ['H20 | NW2'],
-      b[7] = [t("Anmeldung")],
-      b[8] = ['tdb'],
-      b[9] = [t('liste')]
+      b[7] = ['H20 | NW2'],
+      b[8] = [t("Anmeldung")],
+      b[9] = ['tdb'],
+      b[10] = [t('liste')]
 
 
 /*
@@ -325,6 +328,7 @@ export default defineComponent({
   "ab": "ab",
   "Erstsemestergrillen": "Erstsemestergrillen",
   "Kneipentour": "Kneipentour",
+  "Tour": "Einführungsveranstaltung und Campustour"
   "Einführung": "Einführung",
   "Vorstellung": "Vorstellung der Fachschaft",
   "Führung": "Campusführung",
@@ -401,6 +405,7 @@ export default defineComponent({
   "ab": "from",
   "Erstsemestergrillen": "freshman grilling",
   "Kneipentour": "pub crawl",
+  "Tour": "orientation & campus tour",
   "Einführung": "Introduction",
   "Vorstellung": "Introduction of the student council",
   "Führung": "guided campus tour",
