@@ -174,10 +174,10 @@ export default defineComponent({
 
 
       b[0] = [t('nw2Innen')],
-      b[1] = [t("Anmeldung")],
+      b[1] = [t("Sternplatz")],
       b[2] = ['H17 | NW2'],
       b[3] = ['H20 | NW2'],
-      b[4] = [t("Anmeldung")],
+      b[4] = [t("Sternplatz")],
       b[5] = ['H20 | NW2'],
       b[6] = ['H20 | NW2'],
       b[7] = ['H20 | NW2'],
@@ -340,6 +340,7 @@ export default defineComponent({
   "buddy": "Buddytreffen",
   "Wochenende": "Ersti-Wochenende",
   "Anmeldung": "Anmeldung E-Learning",
+  "Sternplatz": "Treffpunkt: Sternplatz",
   "grillplatz": "städtischer Grillplatz",
   "linkage": "Link im E-Learning",
   "corona": "Es gelten die jeweils aktuellen Corona Regelungen {br} \
@@ -417,6 +418,7 @@ export default defineComponent({
   "buddy": "buddy meeting",
   "Wochenende": "freshers weekend",
   "Anmeldung": "application in E-Learning",
+  "Sternplatz": "meeting point: Sternplatz",
   "grillplatz": "municipal grilling place",
   "linkage": "link in E-Learning",
   "corona": "Corona regulations apply as amended {br} \
