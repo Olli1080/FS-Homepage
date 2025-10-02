@@ -179,10 +179,10 @@ export default defineComponent({
       b[3] = ['H20 | NW2'],
       b[4] = [t("Sternplatz")],
       b[5] = ['H20 | NW2'],
-      b[6] = ['H20 | NW2'],
+      b[6] = ['H36 | NW3'],
       b[7] = ['H20 | NW2'],
-      b[8] = [t("Anmeldung")],
-      b[9] = ['tdb'],
+      b[8] = [t("liste")],
+      b[9] = [t("liste")],
       b[10] = [t('liste')]
 
 
