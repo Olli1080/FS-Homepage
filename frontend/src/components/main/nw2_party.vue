@@ -256,24 +256,24 @@ export default defineComponent({
 <i18n locale="de">
 {
   "p[0]": "Am {day}.{month} findet endlich wieder eine Party im NWII Gebäude statt.\ 
-    	    Seit diesem Semester feiern wir unter dem neuen Motto NW2000-Party mit euch!",
+    	    Auch dieses Semester feiern wir unter dem Motto NW2000-Party mit euch!",
   "p[1]": "Lasst eure Ohren von satten Bässen quer durch die Musik der 2000er massieren, \
           während ihr an der Physikerbar die Künste unserer Shaker bewundert.🤘",
   "p[2]": "Los geht's am {date} um {hour} Uhr und in der ersten Stunde kann mit Bier für 1,5€ \
           ordentlich angeheizt werden!",
   "p[3]": "Wir freuen uns auf euer Erscheinen, also: Let's get it started, Huh!",
-  "p[4]": "Einlass ab 18 Jahren 🔞"
+  "p[4]": "Einlass ab 18 Jahren 🔞 Ort: NW2 - Uni Bayreuth"
 }
 </i18n>
 
 <i18n locale="en">
 {
   "p[0]": "On {month} {day}, there will finally be a party on he NWII- building again.\
-           Since this the semester we will be partying under the new motto NW2000- party!",
+           This semester we will be partying under the motto NW2000- party!",
   "p[1]": "Let your ears be massaged by rich basses across the music of the 2000s, \
           while you admire the arts of our shakers at the physicist bar.🤘",
   "p[2]": "It starts on {date} at {hour} and in the first hour can be properly heated with beer for 1.5€!",
   "p[3]": "We look forward to seeing you there,so: Let's get it started, Huh!",
-  "p[4]": "Minimum Age 18+ 🔞"
+  "p[4]": "Minimum Age 18+ 🔞 location: NW2 - Uni Bayreuth"
 }
 </i18n>
