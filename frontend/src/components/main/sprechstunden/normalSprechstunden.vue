@@ -45,7 +45,7 @@ type Sprechstunden = {
         Dienstag: Partial<Day>
         Mittwoch: Partial<Day>
         Donnerstag: Partial<Day>
-        //Freitag: Partial<Day>
+        Freitag: Partial<Day>
       }
     }
   }
