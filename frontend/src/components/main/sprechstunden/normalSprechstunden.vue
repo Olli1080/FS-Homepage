@@ -69,6 +69,7 @@ export default defineComponent({
       Dienstag{slot0{name}slot1{name}slot2{name}}
       Mittwoch{slot0{name}slot1{name}slot2{name}}
       Donnerstag{slot0{name}slot1{name}slot2{name}}
+      Freitag{slot0{name}slot1{name}slot2{name}}
     }}}}
     `)
 
