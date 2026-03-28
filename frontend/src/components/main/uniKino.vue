@@ -371,8 +371,8 @@ export default defineComponent({
           Kinofeeling ab und an Popcorn angeboten werden.",
   "p[2]": "Die gezeigten Filme wurden in den vergangenen Semester stets durch Studierende der Universität \
           mitbestimmt und werden durch vorhergehende Kurzfilme abgerundet.",
-  "p[3]": "Und das alles könnt ihr schon für den kleinen Unkostenbeitrag von 3€ erleben!",
-  "p[4]": "Aber sogar dieser Unkostenbeitrag entfällt bei unseren Sommer- und Weihnachtsspecials! Bei diesen \
+  "p[3]": "Und das alles könnt ihr KOSTENLOS erleben!",
+  "p[4]": "Wir haben auch Sommer- und Weihnachtsspecials! Bei diesen \
           Specials bieten wir zusätzlich auch noch Glühwein (Winter) oder Cocktails (Sommer) an. Das \
           Sommerspecial ist außerdem im Innenhof des NW2-Gebäudes, also OPEN AIR!",
   "p[5.1]": "Die Termine für dieses Semester sind:",
@@ -398,8 +398,8 @@ export default defineComponent({
           cinema feeling from time to time.",
   "p[2]": "In past semesters, the films shown have always been co-directed by students at the university and are rounded \
           out by preceding short films.",
-  "p[3]": "And you can experience all this for the small fee of 3€!",
-  "p[4]": "But even this expense contribution is waived for our summer and christmas specials! During these specials we \
+  "p[3]": "And you can experience all this for FREE!",
+  "p[4]": "We also have summer and christmas specials! During these specials we \
           also offer mulled wine (winter) or cocktails (summer). The \
           Summer Special is also in the courtyard of the NW2 building, therefore OPEN AIR!",
   "p[5.1]": "The dates for this semester are:",

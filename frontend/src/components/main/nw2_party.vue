@@ -258,7 +258,7 @@ export default defineComponent({
   "p[0]": "Am {day}.{month} findet endlich wieder eine Party im NWII Gebäude statt.\ 
     	    Auch dieses Semester feiern wir unter dem Motto NW2000-Party mit euch!",
   "p[1]": "Lasst eure Ohren von satten Bässen quer durch die Musik der 2000er massieren, \
-          während ihr an der Physikerbar die Künste unserer Shaker bewundert.🤘",
+          während ihr an der Physikerbar die Künste unserer Shaker bewundert.🍹",
   "p[2]": "Los geht's am {date} um {hour} Uhr und in der ersten Stunde kann mit Bier für 1,5€ \
           ordentlich angeheizt werden!",
   "p[3]": "Wir freuen uns auf euer Erscheinen, also: Let's get it started, Huh!",
@@ -271,7 +271,7 @@ export default defineComponent({
   "p[0]": "On {month} {day}, there will finally be a party on he NWII- building again.\
            This semester we will be partying under the motto NW2000- party!",
   "p[1]": "Let your ears be massaged by rich basses across the music of the 2000s, \
-          while you admire the arts of our shakers at the physicist bar.🤘",
+          while you admire the arts of our shakers at the physicist bar.🍹",
   "p[2]": "It starts on {date} at {hour} and in the first hour can be properly heated with beer for 1.5€!",
   "p[3]": "We look forward to seeing you there,so: Let's get it started, Huh!",
   "p[4]": "Minimum Age 18+ 🔞 location: NW2 - Uni Bayreuth"
