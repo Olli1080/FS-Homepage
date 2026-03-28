@@ -40,6 +40,7 @@
           />
         </section>
         <br />
+        <!--
         <i18n-t
           tag="h1"
           keypath="h[3]"
@@ -48,6 +49,7 @@
           tag="p"
           keypath="p[3]"
         />
+      -->
         <br />
         <i18n-t
           tag="h1"
@@ -58,6 +60,7 @@
           keypath="p[4]"
         />
         <br />
+        <!--
         <i18n-t
           tag="h1"
           keypath="h[5]"
@@ -75,6 +78,7 @@
           tag="p"
           keypath="p[6]"
         />
+      -->
         <br />
   <!--     <i18n-t
           tag="h1"
@@ -136,6 +140,7 @@ export default defineComponent({
     const categories = computed(() => [t('event'), t('location')])
 
     const stunden = computed(() => [
+      /*
       `07.10 | ${t('ab')} 17:00`,
       '08.10 | 19:00',
       '13.10 | 16:15 - 17:00',
@@ -147,12 +152,12 @@ export default defineComponent({
       '23.10 | 19:00',
       '29.10 | 17:00',
       '07.11 - 09.11'
-      /*
-      '23.04 | 12:00',
-      '28.04 | 18:15',
-      '29.04 | 19:00',
-      '05.06 | 18:00'
       */
+      '16.04 | 18:15'
+      //'28.04 | 18:15',
+      //'29.04 | 19:00',
+      //'05.06 | 18:00'
+      
     ])
 
     const sprechstunden = computed(() =>
@@ -160,6 +165,7 @@ export default defineComponent({
       let a: TableRow = {}
       let b: TableRow = {}
       //Wintersemestertermine
+      /*
       a[0] = [t('Erstsemestergrillen')]
       a[1] = ['1. ' + t('Kneipentour')],
       a[2] = [t('Tour')],
@@ -184,19 +190,21 @@ export default defineComponent({
       b[8] = [t("liste")],
       b[9] = [t("liste")],
       b[10] = [t('liste')]
+*/
 
 
-/*
       //Sommersemestertermine
-      a[0] = [t('Führung')]
+      a[0] = [t('Kneipentour')]
+    /*
       a[1] = [t('Sitzung')],
       a[2] = [t('Spieleabend')],
       a[3] = [
         t('shake')
       ],
+*/
 
-
-      b[0] = ['Direkt im Anschluss an die Einführungsveranstaltung B.Sc. Informatik; Es gibt Erstitüten!'],
+      b[0] = ['Vor der Fachschaft oder 19 Uhr Sternplatz. Alle Erstis und Zweitis sind herzlich eingeladen :)']
+      /*
       b[1] = ['S80 | NW2, Fachschaftssitzung zum Reinschnuppern'],
       b[2] = ['H20 | NW2'],
       b[3] = ['Weitere Informationen im e-learning Kurs der Fachschaft']
@@ -291,7 +299,7 @@ export default defineComponent({
           natürlich für jeden immer offen, egal ob bei konkreten Fragen und \
           Problemen oder um einfach nur ein bisschen zu entspannen. Andererseits \
           organisiert die Fachschaft auch speziell für Erstsemester \
-          Veranstaltungen zum Kennenlernen. Die Erstsemester-Veranstaltungen",
+          Veranstaltungen zum Kennenlernen. Die Erstsemester-Veranstaltungen:",
   "h[3]": "Buddy-System (und Spieleabende)",
   "p[3]": "Dies ist ein Hilfesystem für Erstsemestler, bei dem jeder Ersti \
           einen Studierenden aus einem höheren Semester (bestenfalls \
@@ -301,11 +309,11 @@ export default defineComponent({
           Spieleabende oder Ähnliches angeboten, bei denen ihr nette Leute eurer \
           Fakultät kennenlernen könnt 😃",
   "h[4]": "Kneipentouren",
-  "p[4]": "Zum Anfang des Semesters organisieren wir immer zwei Kneipentouren für \
-          alle Erstsemester. In kleineren Gruppen besucht man hier an einem \
+  "p[4]": "Zum Anfang des Semesters organisieren wir immer mindestens eine Kneipentouren für \
+          alle Erst- und Zweitsemestler. In kleineren Gruppen besucht man hier an einem \
           Abend drei bis vier der Bayreuther Kneipen. Dabei kann man nicht nur \
           die Stadt und ihre Angebote besser kennenlernen, sondern auch die \
-          anderen Erstsemester und die Fachschaft.",
+          anderen Mitstudierenden und die Fachschaft.",
   "h[5]": "Erstiwochenende",
   "p[5]": "Immer am Anfang des Wintersemesters fahren alle Fachschaftler mit \
           allen Erstis, die Lust haben, zusammen in eine Unterkunft in der Nähe \
@@ -322,7 +330,7 @@ export default defineComponent({
   "h[7]": "Erstifrühstück",
   "p[7]": "Ein kleines, aber feines Frühstück in der Uni auf Kosten der \
           Fachschaft.",
-  "dates": "Termine für das Wintersemester 25/26",
+  "dates": "Termine für das Sommersemester 26",
   "event": "Veranstaltung",
   "location": "Ort",
   "ab": "ab",
@@ -387,7 +395,7 @@ export default defineComponent({
           Your budy will gladly help you with your questions regarding the organization of your studies especially since it can be somewhat confusing in the beginning. \
           Furthermore there will be some games evenings or similar offered where your able to get to know nice people from your faculty 😃",
   "h[4]": "Pub crawls",
-  "p[4]": "We're always organizing two pub crawls for all freshman at the beginning of the semester. \
+  "p[4]": "We're always organizing at least one pub crawls for all freshman at the beginning of the semester. \
           On one evening you'll be visiting three to four pubs of Bayreuth in small groups. \
           In doing so you're not only able to see the town and get to know its offers but also the other freshman and the student council.",
   "h[5]": "Freshers weekend",
@@ -400,7 +408,7 @@ export default defineComponent({
           Over foods and drinks you're able to get into conversations with other students.",
   "h[7]": "Freshers breakfast",
   "p[7]": "A small but fine breakfast in the uni at the expense of the student council.",
-  "dates": "Dates for the winter semester 25/26",
+  "dates": "Dates for the summer semester 26",
   "event": "Event",
   "location": "Location",
   "ab": "from",
