@@ -1,11 +1,9 @@
-import ssrBase from './ssrBase.js'
+import ssrBase from './ssrBase'
 //@ts-ignore
 import * as bundle from '@distServer/app.mjs'
-//@ts-ignore
-import ssrManifest from '@distClient/ssr-manifest.json' assert { type: 'json'}
-//@ts-ignore
-import manifest from '@distClient/manifest.json' assert { type: 'json'}
-import html from '../indexHtml.js'
+import ssrManifest from '@distClient/.vite/ssr-manifest.json' with { type: 'json'}
+import manifest from '@distClient/.vite/manifest.json' with { type: 'json'}
+import html from '../indexHtml'
 
 import { JSDOM } from 'jsdom'
 
@@ -27,12 +25,13 @@ export default function ssr()
         <link rel="stylesheet" href="/dist/${manifest['src/client/main.ts'].css}" />
         <script type="module" src="/dist/${manifest["src/client/main.ts"].file}"></script>
       `
-      ssrBase(dom, ssrManifest, bundle, req, res)
+      await ssrBase(dom, ssrManifest, bundle, req, res)
     }
     catch (error)
     {
       console.log("[SSR-Render]: " + error)
-      return res.status(500).end("Internal Server Error")
+      res.status(500).end("Internal Server Error")
+      return
     }
   }
 }

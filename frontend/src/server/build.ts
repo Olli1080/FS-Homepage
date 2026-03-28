@@ -1,4 +1,4 @@
-import { Build } from './runtimeConfig.js'
+import { Build } from './runtimeConfig'
 import { gzip as gzipRaw, brotliCompress, constants } from 'zlib'
 import { promisify } from 'util'
 import { fileURLToPath } from 'url'
@@ -61,7 +61,7 @@ async function generate(
   const { dir, base } = original.path
   const algorithm = getAlgorithm(type)
 
-  const contentCompressed = await algorithm(original.content, getConfig('gzip'))
+  const contentCompressed = await algorithm(original.content, getConfig(type))
   if (Buffer.byteLength(contentCompressed) / original.size <= minRatio)
   {
     await writeFile(join(dir, base + '.' + getExtension(type)), contentCompressed)
@@ -73,7 +73,7 @@ async function generate(
   try
   {
     const build = await new Build(false).build()
-    const manifest: Record<string, { file: string }> = JSON.parse(await readFile(new URL("../../dist-ssr/dist/manifest.json", import.meta.url), 'utf-8'))
+    const manifest: Record<string, { file: string }> = JSON.parse(await readFile(new URL("../../dist-ssr/dist/.vite/manifest.json", import.meta.url), 'utf-8'))
 
     const files = getGeneratedFiles(manifest)
     await Promise.all([...files].map(async (filePath) =>

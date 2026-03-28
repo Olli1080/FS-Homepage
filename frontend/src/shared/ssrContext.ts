@@ -1,4 +1,4 @@
-import { WithContext, Event } from "schema-dts"
+import type { WithContext, Event } from "schema-dts"
 import { useSSRContext as useVueContext } from "vue"
 import type { SSRContext as VueContext } from "@vue/server-renderer"
 

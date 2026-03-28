@@ -1,21 +1,20 @@
 //import 'vite/modulepreload-polyfill'
 import { createSSRApp, createApp } from 'vue'
-import { createBundledRouter } from './router.js'
+import { createBundledRouter } from './router'
 
 import { useI18n } from 'vue-i18n'
-//@ts-ignore
+import { merge } from 'lodash-es'
 import { createVuetify } from 'vuetify'
-//@ts-ignore
+import { de, en } from 'vuetify/locale'
 import { createVueI18nAdapter } from 'vuetify/locale/adapters/vue-i18n'
-//@ts-ignore
 import { aliases, mdi } from 'vuetify/lib/iconsets/mdi-svg'
 import { createPinia } from 'pinia'
 
 import app from '@components/App.vue'
-import { createGraphql } from '@shared/graphql.js'
-import { useStore } from '@shared/store.js'
-import { createI18n } from '@shared/i18n.js'
-import { createTagManager } from '@shared/tags/registration.js'
+import { createGraphql } from '@shared/graphql'
+import { useStore } from '@shared/store'
+import { createI18n } from '@shared/i18n'
+import { createTagManager } from '@shared/tags/registration'
 
 //import messages from '@intlify/unplugin-vue-i18n/messages'
 
@@ -77,7 +76,10 @@ async function createBundledApp(root: Component, args: BundleArgs = {})
     locale: {
       adapter: createVueI18nAdapter({ i18n, useI18n })
     },
-    ssr: true
+    ssr: true,
+    theme: {
+      cspNonce: store.nonce
+    }
   }))
   app.use(tagManager)
 

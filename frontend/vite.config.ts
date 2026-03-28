@@ -1,6 +1,6 @@
-var __defProp = Object.defineProperty
+/*var __defProp = Object.defineProperty
 var __name = (target, value) => __defProp(target, 'name', { value, configurable: true })
-globalThis.__name = __name
+globalThis.__name = __name*/
 
 import { resolve, join, dirname } from 'path'
 /*
@@ -19,9 +19,10 @@ import vue from '@vitejs/plugin-vue'
 import vueI18n from '@intlify/unplugin-vue-i18n/vite'
 import vuetify from 'vite-plugin-vuetify'
 import tsconfigPaths from 'vite-tsconfig-paths'
-import typescript from '@rollup/plugin-typescript'
+//import typescript from '@rollup/plugin-typescript'
 import { defineConfig } from 'vite'
 import { visualizer } from "rollup-plugin-visualizer"
+import tailwindcss from '@tailwindcss/vite'
 
 type Options = {
   isProd: boolean
@@ -62,7 +63,10 @@ export async function configFunction(options: Partial<Options> = {}): Promise<Us
       tsconfigRaw: await readFile(
         new URL(configRelative, import.meta.url),
         'utf-8'
-      )
+      ),
+      supported: {
+        'top-level-await': true //browsers can handle top-level-await features
+      },
     },
     ssr: {
       noExternal: [/\.css$/, /\?vue&type=style/, /^vuetify/, /@vue\/apollo-composable/, /vue-i18n/]
@@ -140,19 +144,16 @@ export async function configFunction(options: Partial<Options> = {}): Promise<Us
       }
     },
     plugins: [
-      //@ts-ignore
       vue(),
-      //@ts-ignore
       vueI18n({
         // if you want to use Vue I18n Legacy API, you need to set `compositionOnly: false`
         // compositionOnly: false,
+        ssr: true,
 
         // you need to set i18n resource including paths !
-        include: resolve(dir, './src/shared/Translations/**'),
-        ssr: isSSR
+        include: resolve(dir, './src/shared/Translations/**')
       }),
-      //@ts-ignore
-      vuetify(),
+      vuetify({styles: {configFile: 'src/css/vuetify_globals.scss'}}),
       tsconfigPaths(
         {
           projects: [configRelative],
@@ -160,8 +161,7 @@ export async function configFunction(options: Partial<Options> = {}): Promise<Us
           loose: true
         }),
       visualizer(),
-      //@ts-ignore
-      typescript({ tsconfig: configRelative, sourceMap: !isProd, inlineSources: !isProd })
+      tailwindcss()
     ],
     define: {
       __IS_SSR__: isSSR,

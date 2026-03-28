@@ -19,11 +19,11 @@ const metaEntries: MetaEntry[] =
       {
         "name": "description",
         "content": "Fachschaft Mathe/Physik/Informatik"
-      },
+      }/*,
       {
         "name": "google-site-verification",
-        "content": "BH6NGa-Zbe3kfHNiFuIvNUOSm8myjW8Amr8i5P_tXaE"
-      }
+        "content": "PLEASE_INSERT_HERE"
+      }*/
     ]
 
 export function getMeta(): string

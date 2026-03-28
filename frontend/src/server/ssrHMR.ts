@@ -1,4 +1,4 @@
-import ssrBase from "./ssrBase.js"
+import ssrBase from "./ssrBase"
 //import { createRequire } from 'module'
 //const require = createRequire(import.meta.url)
 import { JSDOM } from 'jsdom'
@@ -16,7 +16,7 @@ function loadDevMiddleWare(res: Response)
   return <devMiddleware>{ vite: res.locals!.vite }
 }
 
-import rawHtml from '../indexHtml.js'
+import rawHtml from '../indexHtml'
 
 
 export default function ssr()
@@ -37,12 +37,12 @@ export default function ssr()
       dom.window.document.head.innerHTML += `<script type="module" src="/src/client/main.ts"></script>`
 
       const bundle = await devMiddleware.vite.ssrLoadModule('src/shared/app.ts')
-      ssrBase(dom, {}, bundle, req, res)
+      await ssrBase(dom, {}, bundle, req, res)
     }
     catch (error)
     {
-      //@ts-ignore
-      devMiddleware.vite.ssrFixStacktrace(error)
+      if (error instanceof Error)
+        devMiddleware.vite.ssrFixStacktrace(error)
       console.log("[SSR-Render]: " + error)
       res.status(500).end("Internal Server Error")
     }

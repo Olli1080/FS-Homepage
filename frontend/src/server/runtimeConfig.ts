@@ -1,7 +1,7 @@
-import { configFunction } from '../../vite.config.js'
+import { configFunction } from '../../vite.config'
 import { Router } from 'express'
-import ssr from './ssrHMR.js'
-import { fileRequest } from './fileRequest.js'
+import ssr from './ssrHMR'
+import { fileRequest } from './fileRequest'
 import { join, resolve } from 'path'
 import { fileURLToPath } from 'url'
 import { merge } from 'lodash-es'
@@ -141,12 +141,14 @@ export class Build
     }
     this.mRouter.use(/\/(dist.*|favicon.ico)/, (req, res) =>
     {
-      return res.status(404).end()
+      res.status(404).end()
+      return
     })
     this.mRouter.use(ssr())
     this.mRouter.use((req, res) =>
     {
-      return res.status(404).end()
+      res.status(404).end()
+      return
     })
   }
 }

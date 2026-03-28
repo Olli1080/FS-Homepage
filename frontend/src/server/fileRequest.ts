@@ -5,9 +5,9 @@ import fsExtra from "fs-extra"
 const { getType } = mime
 const { pathExists } = fsExtra
 
-import type { Request, Response } from 'express'
+import type { Request, Response, RequestHandler } from 'express'
 
-export function fileRequest(basePath: string)
+export function fileRequest(basePath: string): RequestHandler
 {
   return async (req: Request, res: Response) =>
   {
@@ -31,23 +31,26 @@ export function fileRequest(basePath: string)
           const distPathEncoded = distPath.concat('.', extension)
           if (await pathExists(distPathEncoded))
           {
-            const contentType = getType(distPath)
+            const contentType = mime.getType(distPath)
             res.setHeader('Content-Encoding', encoding)
             res.status(200).contentType(contentType!).sendFile(distPathEncoded)
             return
           }
         }
-        return res.status(200).sendFile(distPath)
+        res.status(200).sendFile(distPath)
+        return 
       }
       else
       {
-        return res.status(404).end()
+        res.status(404).end()
+        return
       }
     }
     catch (error)
     {
       console.log(error)
-      return res.status(500).end()
+      res.status(500).end()
+      return
     }
   }
 };

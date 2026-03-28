@@ -1,5 +1,5 @@
-//import isURL from 'validator/lib/isURL.js'
-
+import isURL from 'validator/lib/isURL.js'
+import isDataURI from 'validator/lib/isDataURI.js'
 
 const endToMime: Map<string, string> = new Map<string, string>([
   ['svg', 'image/svg+xml']

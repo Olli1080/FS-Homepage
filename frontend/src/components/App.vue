@@ -6,18 +6,17 @@
 
 <script lang="ts">
 import { defineComponent, onMounted, onServerPrefetch, watch, computed } from 'vue'
-import { useSSRContext } from '@shared/ssrContext.js'
+import { useSSRContext } from '@shared/ssrContext'
 import { useRouter, useRoute } from 'vue-router'
-import { useStore } from '@shared/store.js'
-import { createFaviconLink } from '@shared/favicon.js'
+import { useStore } from '@shared/store'
+import { createFaviconLink } from '@shared/favicon'
 import { storeToRefs } from 'pinia'
-import { VueRoutes } from '@client/routes.js'
-import { determineLanguage } from '@shared/util.js'
+import { VueRoutes } from '@client/routes'
+import { determineLanguage } from '@shared/util'
 
-import { useI18nGlobal } from '@shared/i18n.js'
+import { useI18nGlobal } from '@shared/i18n'
 
-import 'tailwindcss/tailwind.css'
-import 'vuetify/lib/styles/main.css'
+import 'vuetify/styles'
 
 export default defineComponent({
   name: 'app',
@@ -83,5 +82,6 @@ export default defineComponent({
 </script>
 
 <style>
+@import "tailwindcss" prefix(tw);
 @import '../css/fachschaft-styles.less';
 </style>

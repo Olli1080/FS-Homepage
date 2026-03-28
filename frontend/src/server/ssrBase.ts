@@ -1,8 +1,8 @@
-import { createDefaultContext } from './context.js'
+import { createDefaultContext } from './context'
 import { renderToString } from '@vue/server-renderer'
-import { getMeta } from './meta.config.js'
-import { createFaviconLink } from '@shared/favicon.js'
-import { determineLanguage } from '@shared/util.js'
+import { getMeta } from './meta.config'
+import { createFaviconLink } from '@shared/favicon'
+import { determineLanguage } from '@shared/util'
 import { JSDOM } from 'jsdom'
 import { exportStates } from '@vue/apollo-ssr'
 
@@ -21,8 +21,8 @@ const { sign } = jsonwt
 import type { Request, Response } from 'express'
 
 import { env } from 'process'
-import type { SSRContext } from '@shared/ssrContext.js'
-import type { BundleArgs, createDefaultApp as CreateDefaultApp } from '@shared/app.js'
+import type { SSRContext } from '@shared/ssrContext'
+import type { BundleArgs, createDefaultApp as CreateDefaultApp } from '@shared/app'
 
 let networkToken: string | undefined
 
