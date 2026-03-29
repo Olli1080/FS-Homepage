@@ -1,5 +1,5 @@
 <template>
-  <div class="main tw-px-5 tw-py-2">
+  <div class="main tw:px-5 tw:py-2">
     <h1>Impressum</h1>
     <br />
     <h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>

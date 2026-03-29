@@ -1,6 +1,6 @@
 <template>
   <div
-    class="tw-flex tw-flex-col tw-items-center tw-text-center tw-space-y-2"
+    class="tw:flex tw:flex-col tw:items-center tw:text-center tw:space-y-2"
   >
     <i18n-t
       keypath="t[0]"
@@ -25,7 +25,7 @@
           gap: 19px;
           padding: 10px;
         "
-      class="tw-flex tw-flex-wrap tw-space-x-2 tw-border-solid tw-border-2 tw-text-left tw-justify-center"
+      class="tw:flex tw:flex-wrap tw:space-x-2 tw:border-solid tw:border-2 tw:text-left tw:justify-center"
     >
       <div
         v-for="(sprechstunde, index) in ferien_sprechstunden.sprechstunden"

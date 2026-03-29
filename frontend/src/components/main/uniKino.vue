@@ -1,6 +1,6 @@
 <template>
   <div id="uniKino">
-    <div class="tw-m-3.5">
+    <div class="tw:m-3.5">
       <div style="max-width: 1100px; margin: 0 auto">
         <h2>
           <i18n-t
@@ -68,7 +68,7 @@
             :key="i"
           >
             <movie
-              class="tw-py-3"
+              class="tw:py-3"
               v-bind="movie"
               :orientation="( i % 2) ? 'left' : 'right'"
             >

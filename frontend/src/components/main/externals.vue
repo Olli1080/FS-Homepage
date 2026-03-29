@@ -1,29 +1,29 @@
 <template>
   <div
     id="externals"
-    class="tw-px-5 tw-py-2"
+    class="tw:px-5 tw:py-2"
   >
     <i18n-t
       keypath="mainMessage"
       tag="p"
-      class="tw-text-2xl"
+      class="tw:text-2xl"
     />
     <br />
     <i18n-t
       keypath="studentCouncil"
       tag="h5"
-      class="tw-text-2xl"
+      class="tw:text-2xl"
       scope="global"
       plural="2"
     />
     <ul>
       <li
-        class="tw-ml-5 tw-py-1"
+        class="tw:ml-5 tw:py-1"
         v-for="fachschaft in fachschaften"
         :key="fachschaft.name"
       >
         <a
-          class="link tw-text-xl"
+          class="link tw:text-xl"
           :href="fachschaft.link"
           target="_blank"
           rel="noopener noreferrer"
@@ -33,17 +33,17 @@
     <br />
     <i18n-t
       tag="h5"
-      class="tw-text-2xl"
+      class="tw:text-2xl"
       keypath="studentGroups"
     />
     <ul>
       <li
-        class="tw-ml-5 tw-py-1"
+        class="tw:ml-5 tw:py-1"
         v-for="hochschulgruppe in hochschulgruppen"
         :key="hochschulgruppe.name"
       >
         <a
-          class="link tw-text-xl"
+          class="link tw:text-xl"
           :href="hochschulgruppe.link"
           target="_blank"
           rel="noopener noreferrer"
@@ -53,21 +53,21 @@
     <br />
     <i18n-t
       tag="h5"
-      class="tw-text-2xl"
+      class="tw:text-2xl"
       keypath="furtherLinks"
     />
     <ul>
-      <li class="tw-ml-5 tw-py-1">
+      <li class="tw:ml-5 tw:py-1">
         <a
-          class="link tw-text-xl"
+          class="link tw:text-xl"
           href="https://alumpi.de/"
           target="_blank"
           rel="noopener noreferrer"
         >Alumpi</a>
       </li>
-      <li class="tw-ml-5 tw-py-1">
+      <li class="tw:ml-5 tw:py-1">
         <a
-          class="link tw-text-xl"
+          class="link tw:text-xl"
           href="https://www.max-academy.de/"
           target="_blank"
           rel="noopener noreferrer"

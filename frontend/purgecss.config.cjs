@@ -22,8 +22,9 @@ module.exports = {
     }
   ],
   safelist: {
-    standard: [/-(leave|enter|appear)(|-(to|from|active))$/, /^(?!(|.*?:)cursor-move).+-move$/, /^router-link(|-exact)-active$/, /v-icon--size-.*/],
-    greedy: [/data-v-.*/],
+    standard: [/-(leave|enter|appear)(|-(to|from|active))$/, /^(?!(|.*?:)cursor-move).+-move$/, /^router-link(|-exact)-active$/, /v-icon--size-.*/, /^fachschafts-header$/, /^footer$/],
+    greedy: [/data-v-.*/, /^tw:.*/],
+
     deep: [/^v-.*/]
   }
   //rejected: true,

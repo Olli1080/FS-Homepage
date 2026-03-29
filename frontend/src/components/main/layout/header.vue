@@ -1,15 +1,15 @@
 <template>
   <header
-    class="tw-justify-between md:tw-items-center fachschafts-header tw-py-1.5"
+    class="tw:justify-between tw:md:items-center fachschafts-header tw:py-1.5"
   >
-    <div class="tw-flex tw-items-center tw-space-x-4">
+    <div class="tw:flex tw:items-center tw:gap-x-4">
       <div />
       <router-link to="/">
         <img
           v-if="navLogo"
           :src="navLogo"
           alt="Alberner Tross"
-          class="tw-h-12"
+          class="tw:h-12"
         />
       </router-link>
       <p
@@ -27,16 +27,16 @@
     </div>
     <div
       style="z-index: 9999"
-      class="tw-relative tw-flex tw-flex-row md:tw-hidden"
+      class="tw:relative tw:flex tw:flex-row tw:md:hidden"
     >
       <button
         aria-label="Header-Menü"
         type="button"
-        class="tw-appearance-none tw-block tw-transition-all tw-cursor-pointer focus:tw-outline-none active:tw-bg-transparent tw-py-3 tw-px-6"
+        class="tw:appearance-none tw:block tw:transition-all tw:cursor-pointer tw:focus:outline-none tw:active:bg-transparent tw:py-3 tw:px-6"
         @click="isOpen = !isOpen"
       >
         <svg
-          class="tw-h-6 tw-w-6 tw-fill-current tw-text-purple-500"
+          class="tw:h-6 tw:w-6 tw:fill-current tw:text-purple-500"
           viewBox="0 0 24 24"
         >
           <path
@@ -54,27 +54,27 @@
     </div>
     <div
       style="z-index: 9998;"
-      class="tw-flex tw-justify-end tw-flex-col
-      md:tw-flex-row popup tw-rounded-lg
-       tw-bg-gray-100 tw-absolute tw-pt-6 md:tw-relative
-        md:tw-h-auto md:tw-bg-transparent md:tw-pt-0 ab"
+      class="tw:flex tw:justify-end tw:flex-col
+      tw:md:flex-row popup tw:rounded-lg
+       tw:bg-gray-100 tw:absolute tw:pt-6 tw:md:relative
+        tw:md:h-auto tw:md:bg-transparent tw:md:pt-0 ab"
       :class="
         isOpen
           ? 'ak-visible'
           : 'ak-hidden'
       "
     >
-      <h4 class="tw-px-8 custom-uppercase tw-text-gray-600 md:tw-hidden">
+      <h4 class="tw:px-8 custom-uppercase tw:text-gray-600 tw:md:hidden">
         Menu
       </h4>
       <nav>
         <ul
-          class="tw-flex tw-flex-wrap tw-list-none tw-list-inside tw-px-6 tw-py-3 lg:tw-items-center md:tw-justify-end tw-gap-y-4"
+          class="tw:flex tw:flex-wrap tw:list-none tw:list-inside tw:px-6 tw:py-3 tw:lg:items-center tw:md:justify-end tw:gap-y-4"
         >
           <li
             v-for="(item, index) in routes"
             :key="index"
-            class="tw-w-1/2 md:tw-w-auto"
+            class="tw:w-1/2 tw:md:w-auto"
           >
             <router-link
               :key="index"
@@ -83,19 +83,19 @@
               <span
                 v-if="item.meta?.title"
                 v-text="tGlobal(item.meta.title as string)"
-                class="tw-p-2.5"
+                class="tw:p-2.5"
               />
             </router-link>
           </li>
         </ul>
       </nav>
       <div
-        class="tw-flex tw-flex-none tw-justify-evenly tw-items-center myImg temp"
+        class="tw:flex tw:flex-none tw:justify-evenly tw:items-center myImg temp"
       >
         <img
           alt="german flag"
           :src="gerFlagSvg"
-          class="tw-px-3"
+          class="tw:px-3"
         />
         <v-switch
           hide-details
@@ -109,7 +109,7 @@
         <img
           alt="english flag"
           :src="engFlagSvg"
-          class="tw-px-3"
+          class="tw:px-3"
         />
       </div>
     </div>

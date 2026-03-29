@@ -28,10 +28,12 @@
         "month9": "September",
         "month10": "Oktober",
         "month11": "November",
-        "month12": "Dezember"
-    },
-    "en":
-    {
+        "month12": "Dezember",
+        "offlineNotice": "Der Backend-Server ist derzeit nicht erreichbar. Einige Inhalte fehlen möglicherweise. Wir laden automatisch neu, sobald er wieder online ist.",
+        "reloading": "Backend wieder online. Lade neu..."
+        },
+        "en":
+        {
         "studentCouncil": "Student council | Student councils",
         "MATH": "Math",
         "PHYSICS": "Physics",
@@ -59,6 +61,8 @@
         "month9": "september",
         "month10": "september",
         "month11": "november",
-        "month12": "december"
-    }
-}
+        "month12": "december",
+        "offlineNotice": "The backend server is currently unreachable. Some content might be missing. We will automatically reload once it's back online.",
+        "reloading": "Backend back online. Reloading..."
+        }
+        }

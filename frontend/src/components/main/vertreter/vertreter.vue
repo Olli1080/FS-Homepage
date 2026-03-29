@@ -6,7 +6,7 @@
       class="header"
     />
     <br />
-    <div class="tw-flex tw-flex-col tw-items-center">
+    <div class="tw:flex tw:flex-col tw:items-center">
       <div class="all-container">
         <SingleVertreter
           v-for="vertreter_it in vertreter"

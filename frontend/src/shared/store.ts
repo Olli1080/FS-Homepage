@@ -12,6 +12,7 @@ export const useStore = defineStore('main', () =>
   const initialTime = ref(new Date())
   const isUniNetwork = ref(false)
   const nonce = ref("")
+  const backendOffline = ref(false)
 
   return {
     //vars
@@ -19,7 +20,8 @@ export const useStore = defineStore('main', () =>
     defaultTitle,
     initialTime,
     isUniNetwork,
-    nonce
+    nonce,
+    backendOffline
     //computed
   }
 })

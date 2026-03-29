@@ -1,13 +1,13 @@
 <template>
-  <div class="content tw-flex tw-flex-col">
+  <div class="content tw:flex tw:flex-col">
     <v-progress-linear
       v-if="loading"
       indeterminate
       color="var(--color-primary)"
     ></v-progress-linear>
-    <primeheader class="tw-flex-none" />
+    <primeheader class="tw:flex-none" />
     <div
-      class="tw-flex-1 bgrd"
+      class="tw:flex-1 bgrd"
     >
       <router-view
         v-slot="{Component}"
@@ -22,7 +22,7 @@
         </transition>
       </router-view>
     </div>
-    <primefooter class="tw-flex-none" />
+    <primefooter class="tw:flex-none" />
   </div>
 </template>
 

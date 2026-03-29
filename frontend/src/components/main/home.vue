@@ -9,7 +9,7 @@
           tGlobal('COMPUTER SCIENCE')
       }}
     </h3>
-    <div class="tw-text-center">
+    <div class="tw:text-center">
       <h1>{{ t('intermediate') }}!</h1>
       <h2 style="color: #ff9e1f">
         <router-link
@@ -24,16 +24,16 @@
       </h2>
     </div>
     <br />
-    <div class="tw-flex tw-flex-col tw-items-center">
+    <div class="tw:flex tw:flex-col tw:items-center">
       <img
         v-if="fachschaftsimage"
         :src="fachschaftsimage"
         alt="Fachschaftsplakat"
-        class="fachschaftsimage tw-rounded-lg"
+        class="fachschaftsimage tw:rounded-lg"
       />
     </div>
     <br /><br />
-    <div class="tw-m-3.5">
+    <div class="tw:m-3.5">
       <div style="max-width: 1100px; margin: 0 auto">
         <i18n-t
           keypath="theStCo"

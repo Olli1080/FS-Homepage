@@ -8,7 +8,7 @@
       style="margin-bottom: 6px;"
       :class="{
         right: orientation === 'right', left: orientation === 'left',
-        'tw-ml-4': orientation === 'right', 'tw-mr-4': orientation === 'left',
+        'tw:ml-4': orientation === 'right', 'tw:mr-4': orientation === 'left',
       }"
       class="img"
       contain

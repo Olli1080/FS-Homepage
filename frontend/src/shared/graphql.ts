@@ -1,18 +1,42 @@
 import { InMemoryCache, ApolloClient } from '@apollo/client/core'
 import { createHttpLink } from '@apollo/client/link/http'
 import { ApolloLink } from '@apollo/client/link/core/ApolloLink.js'
-//import { ApolloLink } from '@apollo/client/link/core/ApolloLink'
+import { onError } from '@apollo/client/link/error/index.js'
 import { ApolloClients } from '@vue/apollo-composable'
+import { Observable } from '@apollo/client/utilities/observables/Observable.js'
 
 import type { ApolloClientOptions } from '@apollo/client/core'
 import type { NormalizedCacheObject } from '@apollo/client/cache/inmemory/types.js'
 import type { ApolloClients as SSRApolloClients } from '@vue/apollo-ssr'
-//import type { RequestHandler, Operation, NextLink } from '@apollo/client/link/core/types.js'
 import type { App } from 'vue'
 
-/*import { onError } from '@apollo/client/link/error'
+import { useStore } from './store.js'
 
-const errorlink = onError(({ graphQLErrors, networkError }) => {
+let isPolling = false;
+async function pollBackend(uri: string) {
+  if (isPolling) return;
+  isPolling = true;
+
+  while (true) {
+    try {
+      const response = await fetch(uri, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: '{ __typename }' })
+      });
+      if (response.ok) {
+        console.log('Backend is back online, reloading...');
+        window.location.reload();
+        break;
+      }
+    } catch (e) {
+      // Still offline
+    }
+    await new Promise(resolve => setTimeout(resolve, 5000));
+  }
+}
+
+const errorLink = onError(({ graphQLErrors, networkError }) => {
   if (graphQLErrors)
     graphQLErrors.map(({ message, locations, path }) =>
       console.log(
@@ -20,8 +44,29 @@ const errorlink = onError(({ graphQLErrors, networkError }) => {
       ),
     )
 
-  if (networkError) console.log(`[Network error]: ${networkError}`)
-})*/
+  if (networkError) {
+    console.log(`[Network error]: ${networkError}`)
+    
+    if (!import.meta.env.SSR) {
+      const store = useStore()
+      if (store && !store.backendOffline) {
+        store.backendOffline = true;
+        const uri = 'https://fsmpi.uni-bayreuth.de/v1/graphql';
+        console.log("hi")
+        pollBackend(uri);
+      }
+    }
+
+    // If we're on SSR and it's a network error (like timeout/server down), 
+    // return an empty result to prevent SSR from crashing/returning 500.
+    if (import.meta.env.SSR) {
+      return new Observable(observer => {
+        observer.next({ data: null, errors: [] })
+        observer.complete()
+      })
+    }
+  }
+})
 
 function networkMiddleware(networkToken: string)
 {
@@ -43,10 +88,30 @@ async function genHttpLink()
   const uri = (import.meta.env.SSR) ? 'http://strapi:1337/graphql' : 'https://fsmpi.uni-bayreuth.de/v1/graphql'
   const credentials = 'same-origin'
 
-  if (typeof fetch !== 'undefined')
-    return createHttpLink({ uri, /*useGETForQueries: true,*/ credentials })
+  if (import.meta.env.SSR)
+  {
+    const fetchWithTimeout = async (input: RequestInfo | URL, init?: RequestInit) => {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 2000); // 2 second timeout
 
-  return createHttpLink({ uri, fetch: (await import('cross-fetch')).default, /*useGETForQueries: true,*/ credentials })
+      try {
+        const response = await fetch(input, {
+          ...init,
+          signal: controller.signal
+        });
+        return response;
+      } finally {
+        clearTimeout(timeoutId);
+      }
+    };
+
+    return createHttpLink({ uri, fetch: fetchWithTimeout, credentials })
+  }
+
+  if (typeof fetch !== 'undefined')
+    return createHttpLink({ uri, credentials })
+
+  return createHttpLink({ uri, fetch: (await import('cross-fetch')).default, credentials })
 }
 
 async function genClients(networkToken?: string)
@@ -54,7 +119,10 @@ async function genClients(networkToken?: string)
   const http = await genHttpLink()
 
   const apolloOptions: ApolloClientOptions<NormalizedCacheObject> = {
-    link: (import.meta.env.SSR && networkToken) ? networkMiddleware(networkToken).concat(http) : http,
+    link: ApolloLink.from([
+      errorLink,
+      (import.meta.env.SSR && networkToken) ? networkMiddleware(networkToken).concat(http) : http
+    ]),
     cache: !import.meta.env.SSR
     //@ts-ignore
       ? new InMemoryCache().restore((<Object>window.__APOLLO_STATE__).default)

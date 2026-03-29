@@ -3,7 +3,7 @@
     <div class="image-container">
       <div
         v-if="placeholder && !loadedImg"
-        class="tw-flex tw-items-center tw-justify-center"
+        class="tw:flex tw:items-center tw:justify-center"
         :style="{width: Math.min(120, placeholder.width) + 'px' }"
       >
         <v-progress-circular
@@ -16,7 +16,7 @@
       </div>
       <img
         class="image"
-        :class="{'tw-hidden': !loadedImg}"
+        :class="{'tw:hidden': !loadedImg}"
         :src="'/v1' + portraitUrl"
         :alt="name"
         ref="img"

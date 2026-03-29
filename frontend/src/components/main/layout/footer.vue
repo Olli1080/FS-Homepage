@@ -1,7 +1,7 @@
 <template>
-  <footer class="footer tw-p-8 lg:tw-px-4">
+  <footer class="footer tw:p-8 tw:lg:px-4">
     <div
-      class="tw-relative tw-max-w-6xl tw-mx-auto tw-flex tw-flex-col md:tw-flex-row tw-justify-between"
+      class="tw:relative tw:max-w-6xl tw:mx-auto tw:flex tw:flex-col tw:md:flex-row tw:justify-between"
     >
       <div>
         <!--router-link
@@ -17,13 +17,13 @@
       </div>
       <nav
         v-if="routes"
-        class="tw-mt-8 tw-w-full tw-flex tw-flex-wrap md:tw-block md:tw-w-auto md:tw-mt-0"
+        class="tw:mt-8 tw:w-full tw:flex tw:flex-wrap tw:md:block tw:md:w-auto tw:md:mt-0"
       >
         <router-link
           v-for="(item, index) in routes"
           :key="index"
           :to="basePaths.home + item.path"
-          class="tw-block tw-text-xl tw-mt-3 tw-px-2 tw-w-1/2 text-sth hover:tw-text-gray-100 md:tw-text-base md:tw-inline"
+          class="tw:block tw:text-xl tw:mt-3 tw:px-2 tw:w-1/2 text-sth tw:hover:text-gray-100 tw:md:text-base tw:md:inline"
         >
           <span
             v-if="item.meta?.title"

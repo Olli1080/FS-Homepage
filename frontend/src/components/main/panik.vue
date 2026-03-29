@@ -15,7 +15,7 @@
         >
         <p>
         {{ t('no') }}<br />{{ t('click') }}
-        <span class="tw-text-blue-500">{{ t('here') }}</span> {{ t('dl') }}
+        <span class="tw:text-blue-500">{{ t('here') }}</span> {{ t('dl') }}
         </p>
         </a>
       </iframe>

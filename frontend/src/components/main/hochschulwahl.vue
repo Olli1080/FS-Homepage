@@ -1,6 +1,6 @@
 <template>
   <div class="sth">
-    <div class="tw-m-3.5">
+    <div class="tw:m-3.5">
       <div style="max-width: 1100px; margin: 0 auto">
         <h2>
           <i18n-t
@@ -132,7 +132,7 @@
         <i18n-t
           tag="p"
           keypath="p[100]"
-          class="tw-text-2xl"
+          class="tw:text-2xl"
         ></i18n-t>
         <i18n-t
           tag="p"
@@ -186,7 +186,7 @@
         <i18n-t
           tag="p"
           keypath="p[8]"
-          class="tw-text-2xl"
+          class="tw:text-2xl"
         >
         </i18n-t>
         <i18n-t
@@ -233,7 +233,7 @@
         <i18n-t
           tag="p"
           keypath="p[12]"
-          class="tw-text-2xl"
+          class="tw:text-2xl"
         >
           <template #stupa>
             <i18n-t
@@ -338,7 +338,7 @@
         <div style="height: 1.5em"></div>
         <v-no-ssr>
           <div
-            class="tw-flex tw-justify-center"
+            class="tw:flex tw:justify-center"
           >
             <img :src="stupaWahl">
           </div>

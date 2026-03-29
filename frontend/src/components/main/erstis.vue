@@ -7,7 +7,7 @@
       <a href="/coldfusion/">ColdFusion</a>
       <a href="/database/">Database</a>
     </nav-->
-    <div class="tw-m-3.5">
+    <div class="tw:m-3.5">
       <div style="max-width: 1100px; margin: 0 auto">
         <i18n-t
           tag="h3"

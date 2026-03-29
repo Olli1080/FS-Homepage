@@ -41,8 +41,8 @@
         </p>
       </a>
       <br />
-      <div class="tw-flex tw-justify-center tw-flex-wrap">
-        <div class="tw-basis-full">
+      <div class="tw:flex tw:justify-center tw:flex-wrap">
+        <div class="tw:basis-full">
           <v-img
             :src="uniNowImg"
             max-height="100px"
@@ -52,7 +52,7 @@
             @FS.MPI
           </p>
         </div>
-        <div class="tw-basis-1/2 social">
+        <div class="tw:basis-1/2 social">
           <a
             href="https://facebook.com/fsmpi"
             target="_blank"
@@ -69,7 +69,7 @@
             @fsmpi
           </p>
         </div>
-        <div class="tw-basis-1/2 social">
+        <div class="tw:basis-1/2 social">
           <a
             href="https://www.instagram.com/fachschaft_mpi/"
             target="_blank"

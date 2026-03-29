@@ -1,6 +1,6 @@
 <template>
   <div
-    class="tw-px-5"
+    class="tw:px-5"
   >
     <i18n-t
       tag="h1"

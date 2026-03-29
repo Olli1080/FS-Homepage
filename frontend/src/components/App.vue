@@ -1,11 +1,29 @@
 <template>
   <v-app>
     <router-view />
+    <v-snackbar v-if="!isSSR && isMounted"
+      v-model="showSnackbar"
+      color="error"
+      location="top"
+      :timeout="-1"
+      vertical
+    >
+      <div class="tw:font-bold tw:mb-2">
+        {{ t('offlineNotice') }}
+      </div>
+      <template #actions>
+        <v-progress-circular
+          indeterminate
+          size="24"
+          class="tw:mr-2"
+        />
+      </template>
+    </v-snackbar>
   </v-app>
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, onServerPrefetch, watch, computed } from 'vue'
+import { defineComponent, onMounted, onServerPrefetch, watch, computed, ref } from 'vue'
 import { useSSRContext } from '@shared/ssrContext'
 import { useRouter, useRoute } from 'vue-router'
 import { useStore } from '@shared/store'
@@ -16,17 +34,20 @@ import { determineLanguage } from '@shared/util'
 
 import { useI18nGlobal } from '@shared/i18n'
 
-import 'vuetify/styles'
-
 export default defineComponent({
   name: 'app',
   setup()
   {
-    const { defaultTitle, defaultFavicon } = storeToRefs(useStore())
+    const isSSR = import.meta.env.SSR
+    const store = useStore()
+    const { defaultTitle, defaultFavicon, backendOffline } = storeToRefs(store)
     const { t, locale } = useI18nGlobal()
 
     const route = useRoute()
     const router = useRouter()
+
+    const isMounted = ref(false)
+    const showSnackbar = ref(false)
 
     const title = computed(() =>
     {
@@ -51,6 +72,13 @@ export default defineComponent({
 
     onMounted(() =>
     {
+      isMounted.value = true
+      // Sync snackbar state after hydration to avoid mismatch
+      if (backendOffline.value) showSnackbar.value = true
+      watch(backendOffline, (isOffline) => {
+        showSnackbar.value = isOffline
+      })
+
       document.title = title.value
       watch(title, (newTitle) =>
       {
@@ -77,11 +105,20 @@ export default defineComponent({
         document.children[0].setAttribute('lang', locale.value)
       })
     })
+
+    return { t, locale, showSnackbar, isMounted, isSSR }
   }
 })
 </script>
 
+<style lang="scss">
+@use "../css/vuetify_globals.scss";
+</style>
+
+<style lang="less">
+@import '../css/fachschaft-styles.less';
+</style>
+
 <style>
 @import "tailwindcss" prefix(tw);
-@import '../css/fachschaft-styles.less';
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div id="block">
-    <div class="tw-m-3.5">
+    <div class="tw:m-3.5">
       <div style="max-width: 1100px; margin: 0 auto">
         <h2>NW2-Party</h2>
         <template v-if="!loading && !error">
@@ -27,7 +27,7 @@
             keypath="p[4]"
           ></i18n-t>
           <div style="height: 1.5em;"></div>
-          <div class="tw-flex tw-justify-center">
+          <div class="tw:flex tw:justify-center">
             <img
               v-if="image"
               :src="'/v1' + image"
