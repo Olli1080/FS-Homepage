@@ -1,5 +1,5 @@
 # STEP 1: Build Stage
-FROM node:22.14.0-bullseye-slim AS build
+FROM node:22.22-bullseye-slim AS build
 
 # Install build dependencies for sharp and other native modules
 RUN apt-get update && apt-get install -y --no-install-recommends \
