@@ -45,8 +45,8 @@ COPY package.json package-lock.json ./
 RUN npm ci --legacy-peer-deps --omit=dev
 
 # Copy built artifacts from the build stage
+# Note: In this project, 'build' is inside 'dist'
 COPY --from=build /opt/app/dist ./dist
-COPY --from=build /opt/app/build ./build
 COPY --from=build /opt/app/public ./public
 COPY --from=build /opt/app/database ./database
 COPY --from=build /opt/app/config ./config

@@ -46,6 +46,7 @@ RUN npm ci --legacy-peer-deps --omit=dev
 
 # Copy built artifacts from the build stage
 # Strapi v5 uses .strapi for build cache and admin client
+# Note: In this project, 'build' is inside 'dist'
 COPY --from=build /opt/app/dist ./dist
 COPY --from=build /opt/app/.strapi ./.strapi
 COPY --from=build /opt/app/public ./public

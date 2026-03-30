@@ -16,6 +16,7 @@
     "@strapi/plugin-i18n": "4.26.1",
     "@strapi/plugin-users-permissions": "4.26.1",
     "@strapi/strapi": "4.26.1",
+    "apollo-server-errors": "^3.3.1",
     "jsonwebtoken": "^9.0.2",
     "netmask": "^2.0.2",
     "node-fetch": "^2.7.0",
