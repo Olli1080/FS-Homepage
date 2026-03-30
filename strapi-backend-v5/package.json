@@ -12,18 +12,17 @@
     "postinstall": "patch-package"
   },
   "dependencies": {
-    "@strapi/plugin-graphql": "4.26.1",
-    "@strapi/plugin-i18n": "4.26.1",
-    "@strapi/plugin-users-permissions": "4.26.1",
-    "@strapi/strapi": "4.26.1",
+    "@strapi/plugin-graphql": "5.1.0",
+    "@strapi/plugin-users-permissions": "5.1.0",
+    "@strapi/strapi": "5.1.0",
     "jsonwebtoken": "^9.0.2",
     "netmask": "^2.0.2",
     "patch-package": "^8.0.0",
     "pg": "^8.13.1",
     "proxy-agent": "^6.5.0",
-    "react-router-dom": "^5.3.4",
+    "react-router-dom": "^6.22.3",
     "strapi-plugin-translate": "1.4.3",
-    "styled-components": "^5.3.11"
+    "styled-components": "^6.1.8"
   },
   "resolutions": {
     "@graphql-tools/utils": "8.6.7"
@@ -41,10 +40,6 @@
     "@types/jsonwebtoken": "^9.0.8",
     "@types/netmask": "^2.0.2",
     "@types/node-fetch": "^2.6.13",
-    "ajv": "^8.18.0"
-  }
-}
-ode-fetch": "^2.6.13",
     "ajv": "^8.18.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"

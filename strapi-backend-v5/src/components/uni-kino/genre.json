@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_uni_kino_genres",
+  "info": {
+    "displayName": "genre",
+    "icon": "bezier-curve",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "genre": {
+      "type": "enumeration",
+      "enum": [
+        "Action",
+        "Actionkomödie",
+        "Actiondrama",
+        "Abenteuer",
+        "Animationsfilm",
+        "Bibliographie",
+        "Comicverfilmung",
+        "Drama",
+        "Gesellschaftssatire",
+        "Krimi",
+        "Kriegssatire",
+        "Kriegsfilm",
+        "Komödie",
+        "Musikfilm",
+        "Thriller",
+        "Tragikomödie",
+        "Mystery",
+        "Historiendrama",
+        "ScienceFiction",
+        "Western"
+      ],
+      "required": true
+    }
+  }
+}

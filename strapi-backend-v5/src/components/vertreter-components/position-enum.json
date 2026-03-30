@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_vertreter_components_position_enums",
+  "info": {
+    "displayName": "positionEnum",
+    "icon": "battery-full"
+  },
+  "options": {},
+  "attributes": {
+    "enum": {
+      "type": "enumeration",
+      "enum": [
+        "Chef",
+        "Vize",
+        "Finanzen",
+        "Vernetzung",
+        "Uni-Kino",
+        "Öffentlichkeitsarbeit",
+        "Bierkoordination",
+        "Physikerbar",
+        "Grafiken",
+        "Skripten"
+      ],
+      "required": true
+    },
+    "text": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    }
+  }
+}
