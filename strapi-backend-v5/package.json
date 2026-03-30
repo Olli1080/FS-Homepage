@@ -20,6 +20,8 @@
     "patch-package": "^8.0.0",
     "pg": "^8.13.1",
     "proxy-agent": "^6.5.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-router-dom": "^6.22.3",
     "strapi-plugin-translate": "1.4.3",
     "styled-components": "^6.1.8"
@@ -40,8 +42,6 @@
     "@types/jsonwebtoken": "^9.0.8",
     "@types/netmask": "^2.0.2",
     "@types/node-fetch": "^2.6.13",
-    "ajv": "^8.18.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "ajv": "^8.18.0"
   }
 }

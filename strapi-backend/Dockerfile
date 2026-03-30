@@ -16,7 +16,7 @@ WORKDIR /opt/
 COPY package.json package-lock.json ./
 COPY ./patches ./patches 
 
-RUN npm ci
+RUN npm ci --legacy-peer-deps
 
 WORKDIR /opt/app
 COPY . .
@@ -35,7 +35,7 @@ ENV NODE_ENV=${NODE_ENV}
 
 WORKDIR /opt/
 COPY package.json package-lock.json ./
-RUN npm ci --omit=dev
+RUN npm ci --legacy-peer-deps --omit=dev
 
 WORKDIR /opt/app
 # Copy built artifacts and necessary runtime files
