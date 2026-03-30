@@ -247,7 +247,7 @@ export default defineComponent({
           haben wollt, bei uns seid ihr richtig! Falls ihr euch selbst \
           engagieren wollt, können wir euch ein nahezu WG gleiches Gefühl \
           bieten, nur dass bei uns das Wohnzimmer auf dem Campus steht, es keine \
-          gemeinsame Dusche gibt und außerhalb der Pandemie am Tag unzählige \
+          gemeinsame Dusche gibt und am Tag unzählige \
           Leute ein und aus gehen."
 }
 </i18n>
@@ -298,6 +298,6 @@ export default defineComponent({
           or just want to have a casual conversation, you're at the right place with us! \
           If you also want to get yourself involved we can offer you a almost flat share like feeling \
           just that our living room is on the campus with no common shower and there is an uncountable amount of people \
-          going in and out every day out of the pandemic."
+          going in and out every day."
 }
 </i18n>
