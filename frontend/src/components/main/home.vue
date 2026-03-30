@@ -125,11 +125,17 @@ import { computed, defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useI18nGlobal } from '@shared/i18n.js'
 import ei from '@shared/Queries/einstellungen.js'
+import { useTags } from '@shared/tags/registration.js'
+import fsmpiOrganization from '@static/fsmpiOrganization.js'
 
 export default defineComponent({
   setup: () =>
   {
     const res = ei()
+    const tags = useTags()
+
+    tags.try_emplace('org-fsmpi', fsmpiOrganization)
+
     const fachschaftsimage = computed(() =>
     {
       const value = res.result.value

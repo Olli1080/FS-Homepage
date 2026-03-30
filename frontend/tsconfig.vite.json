@@ -20,25 +20,24 @@
       "src/types",
       "types"
     ],
-    "baseUrl": "./",
     "paths": {
       "@dataInterfaces/*": [
-        "src/dataInterfaces/*"
+        "./src/dataInterfaces/*"
       ],
       "@graphql/*": [
-        "src/graphql/*"
+        "./src/graphql/*"
       ],
       "@components/*": [
-        "src/components/*"
+        "./src/components/*"
       ],
       "@static/*": [
-        "src/static/*"
+        "./src/static/*"
       ],
       "@shared/*": [
-        "src/shared/*"
+        "./src/shared/*"
       ],
       "@client/*": [
-        "src/client/*"
+        "./src/client/*"
       ]
     },
     /* Visit https://aka.ms/tsconfig.json to read more about this file */

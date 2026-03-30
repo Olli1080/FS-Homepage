@@ -40,7 +40,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, ref, onBeforeMount } from 'vue'
+import { defineComponent, computed, ref, onBeforeMount, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useI18nGlobal } from '@shared/i18n.js'
 import nw2Party from '@static/nw2Event.js'
@@ -177,10 +177,8 @@ export default defineComponent({
         evaluate()
     })
 
-    query.onResult(((result) =>
+    query.onCompleteResult(((result) =>
     {
-      if (result.partial || result.error)
-        return
       evaluate()
     }))
 

@@ -191,7 +191,7 @@ export default defineComponent({
           }
         }
       }
-    }`, null, { errorPolicy: 'all' })
+      }`, { errorPolicy: 'all' })
 
     const { dayjs } = useDayjs()
 

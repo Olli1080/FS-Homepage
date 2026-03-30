@@ -55,12 +55,14 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, onMounted, PropType, ref } from "vue"
+import { computed, defineComponent, onMounted, ref } from "vue"
 import dayjs from "dayjs"
 import youtube from './youtube.vue'
 
 import { mdiChevronUp } from '@mdi/js'
 import { useI18n } from "vue-i18n"
+
+import type { PropType } from "vue"
 
 export default defineComponent({
   components: {

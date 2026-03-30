@@ -102,28 +102,29 @@ export default defineComponent({
           }
         }
       }
-    `, { date: dayjs(new Date()).utc().format("YYYY-MM-DD") })
+    `, { variables: { date: dayjs(new Date()).utc().format("YYYY-MM-DD") } })
     //TODO:: set initialTime's hours inside db to 16:xx to avoid filtering on same day
 
     const ferien_sprechstunden = computed(() =>
     {
-      const attributes = res.result?.value?.feriensprechstunden.data.attributes
+      const attributes = res.result.value?.feriensprechstunden?.data?.attributes
       if (!attributes)
         return null
 
-      const sprechstunden = attributes.Feriensprechstunde.map((val) =>
+      const sprechstunden = attributes.Feriensprechstunde?.map((val) =>
       {
         return {
           tag: dayjs(val.tag).tz().format('DD.MM'),
-          betreuer: val.Personen.map((per) =>
+          betreuer: val.Personen?.map((per) =>
           {
             return per.Name
           })
         }
       })
 
-      const vonMatch = timeRegex.exec(attributes.von)!
-      const bisMatch = timeRegex.exec(attributes.bis)!
+      //@todo
+      const vonMatch = timeRegex.exec(attributes?.von!)!
+      const bisMatch = timeRegex.exec(attributes?.bis!)!
 
       let von: string | undefined
       let bis: string | undefined

@@ -1,12 +1,9 @@
-import { InMemoryCache, ApolloClient } from '@apollo/client/core'
-import { createHttpLink } from '@apollo/client/link/http'
-import { ApolloLink } from '@apollo/client/link/core/ApolloLink.js'
-import { onError } from '@apollo/client/link/error/index.js'
+import { InMemoryCache, ApolloClient, Observable, ApolloLink } from '@apollo/client/core'
+import { HttpLink } from '@apollo/client/link/http'
+import { ErrorLink } from '@apollo/client/link/error'
+import { CombinedGraphQLErrors } from '@apollo/client/errors'
 import { ApolloClients } from '@vue/apollo-composable'
-import { Observable } from '@apollo/client/utilities/observables/Observable.js'
 
-import type { ApolloClientOptions } from '@apollo/client/core'
-import type { NormalizedCacheObject } from '@apollo/client/cache/inmemory/types.js'
 import type { ApolloClients as SSRApolloClients } from '@vue/apollo-ssr'
 import type { App } from 'vue'
 
@@ -36,23 +33,24 @@ async function pollBackend(uri: string) {
   }
 }
 
-const errorLink = onError(({ graphQLErrors, networkError }) => {
-  if (graphQLErrors)
-    graphQLErrors.map(({ message, locations, path }) =>
+const errorLink = new ErrorLink(({ error, operation, forward }) => {
+  if (error && CombinedGraphQLErrors.is(error)) {
+    error.errors.forEach(({ message, locations, path }) =>
       console.log(
         `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`,
       ),
     )
+  }
 
-  if (networkError) {
-    console.log(`[Network error]: ${networkError}`)
+  // If it's a network error (not a CombinedGraphQLErrors)
+  if (error && !CombinedGraphQLErrors.is(error)) {
+    console.log(`[Network error]: ${error}`)
     
     if (!import.meta.env.SSR) {
       const store = useStore()
       if (store && !store.backendOffline) {
         store.backendOffline = true;
         const uri = 'https://fsmpi.uni-bayreuth.de/v1/graphql';
-        console.log("hi")
         pollBackend(uri);
       }
     }
@@ -60,7 +58,7 @@ const errorLink = onError(({ graphQLErrors, networkError }) => {
     // If we're on SSR and it's a network error (like timeout/server down), 
     // return an empty result to prevent SSR from crashing/returning 500.
     if (import.meta.env.SSR) {
-      return new Observable(observer => {
+      return new Observable<ApolloLink.Result>(observer => {
         observer.next({ data: null, errors: [] })
         observer.complete()
       })
@@ -105,20 +103,20 @@ async function genHttpLink()
       }
     };
 
-    return createHttpLink({ uri, fetch: fetchWithTimeout, credentials })
+    return new HttpLink({ uri, fetch: fetchWithTimeout, credentials })
   }
 
   if (typeof fetch !== 'undefined')
-    return createHttpLink({ uri, credentials })
+    return new HttpLink({ uri, credentials })
 
-  return createHttpLink({ uri, fetch: (await import('cross-fetch')).default, credentials })
+  return new HttpLink({ uri, fetch: (await import('cross-fetch')).default, credentials })
 }
 
 async function genClients(networkToken?: string)
 {
   const http = await genHttpLink()
 
-  const apolloOptions: ApolloClientOptions<NormalizedCacheObject> = {
+  const apolloOptions: ApolloClient.Options = {
     link: ApolloLink.from([
       errorLink,
       (import.meta.env.SSR && networkToken) ? networkMiddleware(networkToken).concat(http) : http

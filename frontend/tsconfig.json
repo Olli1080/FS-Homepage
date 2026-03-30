@@ -34,34 +34,33 @@
       "node_modules"
     ],
     "types": ["vite/client", "@intlify/unplugin-vue-i18n/messages"],
-    "baseUrl": "./",
     "paths": {
       "@dataInterfaces/*": [
-        "src/dataInterfaces/*"
+        "./src/dataInterfaces/*"
       ],
       "@graphql/*": [
-        "src/graphql/*"
+        "./src/graphql/*"
       ],
       "@components/*": [
-        "src/components/*"
+        "./src/components/*"
       ],
       "@db/*": [
-        "src/mongodb/*"
+        "./src/mongodb/*"
       ],
       "@static/*": [
-        "src/static/*"
+        "./src/static/*"
       ],
       "@distClient/*": [
-        "dist-ssr/dist/*"
+        "./dist-ssr/dist/*"
       ],
       "@distServer/*": [
-        "dist-ssr/server/*"
+        "./dist-ssr/server/*"
       ],
       "@shared/*": [
-        "src/shared/*"
+        "./src/shared/*"
       ],
       "@client/*": [
-        "src/client/*"
+        "./src/client/*"
       ]
     },
     /* Visit https://aka.ms/tsconfig.json to read more about this file */

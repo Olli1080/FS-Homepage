@@ -19,8 +19,10 @@
 </template>
 
 <script lang='ts'>
-import { defineComponent, PropType } from "vue"
+import { defineComponent } from "vue"
 import { mdiOpenInNew } from "@mdi/js"
+
+import type { PropType } from "vue"
 
 export type Kind = 'embed' | 'link'
 

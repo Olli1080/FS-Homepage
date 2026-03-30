@@ -148,6 +148,16 @@ export default async function ssr(htmlBlueprint: string | JSDOM, manifest: Recor
   head.innerHTML += `<title>${context.title}</title>`
   head.innerHTML += getMeta()
   head.innerHTML += await createFaviconLink(context.favicon!)
+
+  const baseUrl = 'https://fsmpi.uni-bayreuth.de'
+  const pathWithoutLang = req.path.replace(/^\/(en|de)\//, '/').replace(/^\/(en|de)$/, '/')
+  const fullPath = (pathWithoutLang === '/') ? '' : pathWithoutLang
+
+  head.innerHTML += `<link rel="canonical" href="${baseUrl}${req.path}" />`
+  head.innerHTML += `<link rel="alternate" hreflang="de" href="${baseUrl}${fullPath}" />`
+  head.innerHTML += `<link rel="alternate" hreflang="en" href="${baseUrl}/en${fullPath}" />`
+  head.innerHTML += `<link rel="alternate" hreflang="x-default" href="${baseUrl}${fullPath}" />`
+
   //head.innerHTML += getStyles();
 
   /*if (res.locals?.isUni)

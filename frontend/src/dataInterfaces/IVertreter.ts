@@ -15,7 +15,10 @@ type VertreterGQL = {
       portrait: { data: { attributes: { url: string, width: number, height: number }}}
       hauptfach: { fach: Faecher }
       lehramt?: {
-        zweitfach: { fach: Faecher }
+        zweitfach_DE: string,
+        zweitfach_EN: string,
+        drittfach_DE: string,
+        drittfach_EN: string,
         schultyp: Lehramt
       }
       position: Rolle
