@@ -1,22 +1,12 @@
-import type { Strapi } from '@strapi/strapi'
+import type { Core } from '@strapi/strapi'
 import type { Context } from 'koa'
 
-import { ApolloError } from 'apollo-server-errors'
+import { GraphQLError } from 'graphql'
 import { verify } from 'jsonwebtoken'
 import { Netmask } from 'netmask'
 
 const uniMask = new Netmask("132.180.0.1/16")
 const fsLanMask = new Netmask("172.16.0.1/16")
-/*export class MyError extends ApolloError {
-
-  constructor(message) {
-
-    super(message, 'WRONG_NETWORK');
-    Object.defineProperty(this, 'name', { value: '407' });
-
-  }
-
-}*/
 
 export default {
   /**
@@ -25,7 +15,7 @@ export default {
    *
    * This gives you an opportunity to extend code.
    */
-   register({ strapi }: { strapi : Strapi}) {
+   register({ strapi }: { strapi : Core.Strapi}) {
     const extensionService = strapi.plugin('graphql').service('extension');
 
     function isValidIp(context: Context)
@@ -35,13 +25,13 @@ export default {
       if (!real_ip)
         return false
 
-      return uniMask.contains(real_ip) ||	    
-             fsLanMask.contains(real_ip)
+      return uniMask.contains(real_ip as string) ||	    
+             fsLanMask.contains(real_ip as string)
     }
     
     function isValidJwt(context: Context)
     {
-      const jwt: string | undefined = context.http.request.header['network-token']
+      const jwt: string | undefined = context.http.request.header['network-token'] as string
       //console.log(jwt)
       if (!jwt)
         return false
@@ -57,7 +47,11 @@ export default {
     function checkUniNetwork(context: Context)
     {
       if (!isValidIp(context) && !isValidJwt(context))
-        throw new ApolloError('activate uni vpn', 'WRONG_NETWORK')
+        throw new GraphQLError('activate uni vpn', {
+          extensions: {
+            code: 'WRONG_NETWORK'
+          }
+        })
     }
 
     //console.log(extensionService.shadowCRUD('api::uni-kino-filme.uni-kino-filme').field('datum'))

@@ -15,7 +15,7 @@ COPY package.json package-lock.json ./
 COPY patches ./patches
 
 # Install ALL dependencies (including devDependencies for build)
-RUN npm ci
+RUN npm ci --legacy-peer-deps
 
 # Copy the rest of the source code
 COPY . .

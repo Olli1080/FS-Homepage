@@ -18,6 +18,7 @@
     "@strapi/strapi": "4.26.1",
     "jsonwebtoken": "^9.0.2",
     "netmask": "^2.0.2",
+    "node-fetch": "^2.7.0",
     "patch-package": "^8.0.0",
     "pg": "^8.13.1",
     "proxy-agent": "^6.5.0",

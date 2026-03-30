@@ -1,7 +1,7 @@
 # STEP 1: Build Stage
-FROM node:20.20-bullseye-slim AS build
+FROM node:20.20.1-bullseye-slim AS build
 
-# Install build dependencies for sharp and other native modules
+# Install build dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     libvips-dev \
@@ -12,14 +12,19 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
 
-WORKDIR /opt/
+WORKDIR /opt/app
+
+# Copy configuration and dependency files
 COPY package.json package-lock.json ./
 COPY ./patches ./patches 
 
+# Install dependencies including devDependencies for the build
 RUN npm ci --legacy-peer-deps
 
-WORKDIR /opt/app
+# Copy the rest of the application
 COPY . .
+
+# Build the Strapi project
 RUN npm run build
 
 # STEP 2: Production Stage
@@ -33,12 +38,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
 
-WORKDIR /opt/
+WORKDIR /opt/app
+
+# Copy dependency files and install production dependencies only
 COPY package.json package-lock.json ./
 RUN npm ci --legacy-peer-deps --omit=dev
 
-WORKDIR /opt/app
-# Copy built artifacts and necessary runtime files
+# Copy built artifacts from the build stage
 COPY --from=build /opt/app/dist ./dist
 COPY --from=build /opt/app/build ./build
 COPY --from=build /opt/app/public ./public
@@ -47,7 +53,7 @@ COPY --from=build /opt/app/config ./config
 COPY --from=build /opt/app/package.json ./package.json
 
 # Use non-root user
-RUN chown -R node:node /opt/app /opt/node_modules
+RUN chown -R node:node /opt/app
 USER node
 
 EXPOSE 1337
