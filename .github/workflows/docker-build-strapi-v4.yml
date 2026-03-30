@@ -9,7 +9,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}-strapi-v4
+  IMAGE_NAME: olli1080/fs-homepage-strapi-v4
 
 jobs:
   build-and-push:
@@ -39,6 +39,7 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
             type=raw,value=latest
+            type=ref,event=branch
             type=sha,format=short
 
       - name: Build and push Docker image

@@ -1,4 +1,4 @@
-FROM node:22.22-bulseye-slim
+FROM node:22.22-bullseye-slim
 
 RUN apt-get update && apt-get -y install --no-install-recommends \
   unzip \
