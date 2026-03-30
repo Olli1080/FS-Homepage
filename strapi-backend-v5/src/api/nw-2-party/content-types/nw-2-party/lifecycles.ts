@@ -1,6 +1,6 @@
 import type { Core } from "@strapi/strapi";
 import utils from "@strapi/utils"
-const { file: { bytesToKbytes }, nameToSlug } = utils
+const { file: { bytesToKbytes }, strings: { nameToSlug } } = utils
 const { ValidationError } = utils.errors
 import crypto from 'crypto'
 import { Readable } from "stream";
