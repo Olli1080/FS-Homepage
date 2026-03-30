@@ -2,7 +2,7 @@ name: Docker Build & Push Frontend
 
 on:
   push:
-    branches: [ "vite-migration", "update" ] # Update this to your default branch name if different
+    branches: [ "vite-migration", "update" ]
     paths:
       - 'frontend/**'
   workflow_dispatch:
