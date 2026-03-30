@@ -75,6 +75,12 @@ async function generate(
     const build = await new Build(false).build()
     const manifest: Record<string, { file: string }> = JSON.parse(await readFile(new URL("../../dist-ssr/dist/.vite/manifest.json", import.meta.url), 'utf-8'))
 
+    // Copy manifest.json to dist
+    await fsExtra.copy(
+      new URL("../static/manifest.json", import.meta.url),
+      new URL("../../dist-ssr/dist/manifest.json", import.meta.url)
+    )
+
     const files = getGeneratedFiles(manifest)
     await Promise.all([...files].map(async (filePath) =>
     {

@@ -20,23 +20,34 @@ export async function createSiteMap()
   const baseUrl = "https://fsmpi.uni-bayreuth.de/"
 
   const localRoutes = routes.getLocalRoutes()
-  for (var [key, route] of localRoutes.get('de')!)
-  {
-    let entry: SitemapItem = { url: baseUrl + route, img: [], video: [], links: [] }
+  const languages: SupportedLanguages[] = ['de', 'en']
 
-    for (var lang of ['en'])
+  for (const lang of languages)
+  {
+    const langRoutes = localRoutes.get(lang)
+    if (!langRoutes) continue
+
+    for (const [key, route] of langRoutes)
     {
-      entry.links = entry.links.concat({
-        lang: lang,
-        url: baseUrl + localRoutes.get(lang as 'en')?.get(key)
-      })
+      let entry: SitemapItem = { url: baseUrl + route, img: [], video: [], links: [] }
+
+      for (const altLang of languages)
+      {
+        const altRoute = localRoutes.get(altLang)?.get(key)
+        if (altRoute !== undefined)
+        {
+          entry.links!.push({
+            lang: altLang,
+            url: baseUrl + altRoute
+          })
+        }
+      }
+      stream.write(entry)
     }
-    stream.write(entry)
   }
 
   const pro = streamToPromise(stream).then(sm => sitemap = sm)
 
   stream.end()
   await pro
-  //stream.pipe(res).on('error', (e) => {throw e})
 }

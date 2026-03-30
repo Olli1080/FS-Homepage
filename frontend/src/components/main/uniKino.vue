@@ -38,10 +38,8 @@
             keypath="p[5.1]"
             tag="p"
           ></i18n-t>
-          <p>
-            <template v-for="(date) in formatedDate">
-              {{ date + '/ ' }}
-            </template>
+          <p v-if="formatedDate">
+            {{ formatedDate.join(' / ') }}
           </p>
           <i18n-t
             keypath="p[5.2]"
@@ -263,7 +261,11 @@ export default defineComponent({
 
       return films.map((val) =>
       {
-        return copyLocale(val, locale.value)
+        const m = copyLocale(val, locale.value)
+        if (m.locations.some(l => l.includes('NW2'))) {
+          m.title += ' (Sommerspecial)'
+        }
+        return m
       })
     })
 

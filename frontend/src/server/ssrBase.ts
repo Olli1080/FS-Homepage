@@ -148,6 +148,8 @@ export default async function ssr(htmlBlueprint: string | JSDOM, manifest: Recor
   head.innerHTML += `<title>${context.title}</title>`
   head.innerHTML += getMeta()
   head.innerHTML += await createFaviconLink(context.favicon!)
+  head.innerHTML += '<link rel="manifest" href="/manifest.json">'
+  head.innerHTML += '<meta name="theme-color" content="#ff6600">'
 
   const baseUrl = 'https://fsmpi.uni-bayreuth.de'
   const pathWithoutLang = req.path.replace(/^\/(en|de)\//, '/').replace(/^\/(en|de)$/, '/')

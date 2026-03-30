@@ -48,14 +48,12 @@
 import { computed, defineComponent } from 'vue'
 import { useQuery } from '@vue/apollo-composable'
 import { gql } from 'graphql-tag'
-//import dayjs from 'dayjs'
 import useDayjs from '@shared/dayjs.js'
 import { useI18n } from 'vue-i18n'
-
-//import { useStore } from '@shared/store'
+import { useStore } from '@shared/store'
 
 type Feriensprechstunde = {
-  tag: Date
+  tag: string
   Personen: Array<{ Name: string }>
 }
 
@@ -78,7 +76,9 @@ export default defineComponent({
   {
     const { locale, t } = useI18n()
     const { dayjs } = useDayjs()
-    //const { initialTime } = useStore()
+    const store = useStore()
+    const initialTime = dayjs(store.initialTime)
+
     const res = useQuery<Feriensprechstunden>(gql`
       query nextFSS($date: Date!)
       {
@@ -102,8 +102,7 @@ export default defineComponent({
           }
         }
       }
-    `, { variables: { date: dayjs(new Date()).utc().format("YYYY-MM-DD") } })
-    //TODO:: set initialTime's hours inside db to 16:xx to avoid filtering on same day
+    `, { variables: { date: initialTime.utc().format("YYYY-MM-DD") } })
 
     const ferien_sprechstunden = computed(() =>
     {
@@ -111,20 +110,34 @@ export default defineComponent({
       if (!attributes)
         return null
 
-      const sprechstunden = attributes.Feriensprechstunde?.map((val) =>
-      {
-        return {
-          tag: dayjs(val.tag).tz().format('DD.MM'),
-          betreuer: val.Personen?.map((per) =>
-          {
-            return per.Name
-          })
-        }
-      })
-
-      //@todo
       const vonMatch = timeRegex.exec(attributes?.von!)!
       const bisMatch = timeRegex.exec(attributes?.bis!)!
+      
+      const bisH = parseInt(bisMatch[1])
+      const bisM = parseInt(bisMatch[2])
+
+      const sprechstunden = attributes.Feriensprechstunde
+        ?.filter((val) => {
+          const sessionDate = dayjs(val.tag).tz()
+          if (sessionDate.isBefore(initialTime, 'day')) return false
+          if (sessionDate.isSame(initialTime, 'day')) {
+            const sessionEnd = sessionDate.hour(bisH).minute(bisM)
+            return initialTime.isBefore(sessionEnd)
+          }
+          return true
+        })
+        .map((val) =>
+        {
+          return {
+            tag: dayjs(val.tag).tz().format('DD.MM'),
+            betreuer: val.Personen?.map((per) =>
+            {
+              return per.Name
+            })
+          }
+        })
+
+      if (sprechstunden && sprechstunden.length === 0) return null
 
       let von: string | undefined
       let bis: string | undefined
@@ -145,9 +158,9 @@ export default defineComponent({
           von = `${hourVon}:${vonMatch[2]} AM`
 
         if (hourBis > 12)
-          bis = `${hourBis - 12}:${vonMatch[2]} PM`
+          bis = `${hourBis - 12}:${bisMatch[2]} PM`
         else
-          bis = `${hourBis}:${vonMatch[2]} AM`
+          bis = `${hourBis}:${bisMatch[2]} AM`
       }
 
       return {

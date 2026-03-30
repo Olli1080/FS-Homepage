@@ -14,12 +14,16 @@ async function pollBackend(uri: string) {
   if (isPolling) return;
   isPolling = true;
 
+  const pollInterval = 10000; // 10 seconds
+  console.log(`Backend offline. Polling ${uri} every ${pollInterval/1000}s...`);
+
   while (true) {
     try {
       const response = await fetch(uri, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ query: '{ __typename }' })
+        body: JSON.stringify({ query: '{ __typename }' }),
+        signal: AbortSignal.timeout(5000)
       });
       if (response.ok) {
         console.log('Backend is back online, reloading...');
@@ -27,16 +31,16 @@ async function pollBackend(uri: string) {
         break;
       }
     } catch (e) {
-      // Still offline
+      // Still offline or timeout
     }
-    await new Promise(resolve => setTimeout(resolve, 5000));
+    await new Promise(resolve => setTimeout(resolve, pollInterval));
   }
 }
 
 const errorLink = new ErrorLink(({ error, operation, forward }) => {
   if (error && CombinedGraphQLErrors.is(error)) {
     error.errors.forEach(({ message, locations, path }) =>
-      console.log(
+      console.error(
         `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`,
       ),
     )
@@ -44,12 +48,13 @@ const errorLink = new ErrorLink(({ error, operation, forward }) => {
 
   // If it's a network error (not a CombinedGraphQLErrors)
   if (error && !CombinedGraphQLErrors.is(error)) {
-    console.log(`[Network error]: ${error}`)
+    console.error(`[Network error]: ${error}`)
     
     if (!import.meta.env.SSR) {
       const store = useStore()
       if (store && !store.backendOffline) {
         store.backendOffline = true;
+        // Use current window location to derive backend URI if possible, or fallback to default
         const uri = 'https://fsmpi.uni-bayreuth.de/v1/graphql';
         pollBackend(uri);
       }

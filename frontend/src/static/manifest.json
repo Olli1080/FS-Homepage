@@ -1,0 +1,21 @@
+{
+  "name": "FSMPI Bayreuth",
+  "short_name": "FSMPI",
+  "description": "Website der Fachschaft Mathematik, Physik und Informatik der Universität Bayreuth",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ff6600",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/favicon2.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -12,6 +12,11 @@ import { getSiteMap } from './sitemapF.js'
 
 import type { IncomingMessage, ServerResponse } from 'http'
 
+import { join, dirname } from 'path'
+import { fileURLToPath } from 'url'
+
+const __dirname = dirname(fileURLToPath(import.meta.url))
+
 const server = express()
 
 export function cleanExit(...cleanups: Function[])
@@ -55,6 +60,15 @@ async function base(isDev: boolean)
 Allow: /
       
 Sitemap: https://fsmpi.uni-bayreuth.de/sitemap.xml`)
+  })
+
+  server.get('/manifest.json', (req, res) =>
+  {
+    res.header('Content-Type', 'application/json')
+    const path = isDev 
+      ? join(__dirname, '..', 'static', 'manifest.json')
+      : join(__dirname, '..', '..', '..', 'dist-ssr', 'dist', 'manifest.json')
+    res.sendFile(path)
   })
 
   server.get('/sitemap.xml', async function(req, res)
