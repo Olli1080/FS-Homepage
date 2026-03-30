@@ -1,0 +1,76 @@
+version: "3.7"
+
+volumes:
+  node_modules_frontend: {}
+  strapi_uploads:
+    external: true
+
+services:
+
+  common-frontend:
+    image: ghcr.io/olli1080/fs-homepage-nginx:latest
+    restart: always
+    ports:
+      - "80:80"
+      - "8000:8000"
+    networks:
+      homepage-network:
+        ipv4_address: 172.23.2.10
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  strapi:
+    # Use the v4 image until you have stabilized the baseline, then switch to the v5 tag.
+    image: ghcr.io/olli1080/fs-homepage-strapi-v4:latest
+    # image: ghcr.io/olli1080/fs-homepage-strapi-v5:latest
+    restart: always
+    environment:
+      - HOST=strapi
+      - PORT=1337
+      - URL_ADMIN=http://web.fsmpi:8000/admin
+      - URL_SERVER=https://fsmpi.uni-bayreuth.de/v1
+    volumes:
+      - strapi_uploads:/opt/app/public/uploads
+    ports:
+      - "1337:1337"
+    networks:
+      homepage-network:
+        ipv4_address: 172.23.2.40
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  vuecms:
+    image: ghcr.io/olli1080/fs-homepage-frontend:latest
+    restart: always
+    working_dir: "/var/vuecms"
+    # Note: Host mounts are kept for consistency with the build-local version,
+    # but require the source files to exist on the production host.
+    volumes:
+      - ./frontend:/var/vuecms
+      - /var/vuecms/dist-ssr
+      - /var/vuecms/production
+      - node_modules_frontend:/var/vuecms/node_modules
+    ports:
+      - "5000"
+    networks:
+      homepage-network:
+        ipv4_address: 172.23.2.50
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+networks:
+  homepage-network:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.23.2.0/24
