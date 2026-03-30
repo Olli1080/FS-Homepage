@@ -1,4 +1,4 @@
-FROM nginx
+FROM nginx:1.29.7-alpine
 
 EXPOSE 80
 
