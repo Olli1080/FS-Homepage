@@ -153,11 +153,14 @@ export default defineComponent({
       '29.10 | 17:00',
       '07.11 - 09.11'
       */
-      '16.04 | 18:15'
+      '13.04 | 10:00',
+      '14.04 | 19:00',
+      '16.04 | 18:15',
+      '20.04 | 18:15',
+      'tbd   | 19:00'
       //'28.04 | 18:15',
       //'29.04 | 19:00',
       //'05.06 | 18:00'
-      
     ])
 
     const sprechstunden = computed(() =>
@@ -194,8 +197,12 @@ export default defineComponent({
 
 
       //Sommersemestertermine
-      a[0] = [t('Kneipentour')]
-    /*
+      a[0] = ['Einführungsveranstaltung Informatik mit Campus-Tour und Erstitüten'],
+      a[1] = [t('Spieleabend')],
+      a[2] = [t('Kneipentour')],
+      a[3] = [t('Sitzung')],
+      a[4] = [t('shake')]
+/*
       a[1] = [t('Sitzung')],
       a[2] = [t('Spieleabend')],
       a[3] = [
@@ -203,7 +210,11 @@ export default defineComponent({
       ],
 */
 
-      b[0] = ['Vor der Fachschaft oder 19 Uhr Sternplatz. Alle Erstis und Zweitis sind herzlich eingeladen :)']
+      b[0] = ['Ort: H34'],
+      b[1] = ['H20'],
+      b[2] = ['Vor der Fachschaft oder 19 Uhr Sternplatz. Alle Erstis und Zweitis sind herzlich eingeladen :)'],
+      b[3] = ['S80, NWII'],
+      b[4] = ['Weitere Infos in dem Fachschafts e-learning Kurs']
       /*
       b[1] = ['S80 | NW2, Fachschaftssitzung zum Reinschnuppern'],
       b[2] = ['H20 | NW2'],
