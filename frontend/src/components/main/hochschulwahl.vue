@@ -633,7 +633,7 @@ h2 {
           Wahlzettel.",
   "h[5]": "{a} kann ich wählen?",
   "p[20]": "Die Wahl findet von Montag, den 15.06.26, ab 12 Uhr bis Freitag, den 19.06.26, 12 Uhr online im \
-          <a href="https://forms.uni-bayreuth.de/formcycle/form/alias/1/wahl/" style="color: #FF6400;">Wahlportal</a>\
+          Wahlportal \
           der Uni Bayreuth statt. \
           Wenn ihr wahlberechtigt an der Fakultät MPI seid, könnt ihr eure Stimme dort abgeben. \
           Zur Motivation backen wir am Mittwoch den 17.06. von 8 bis 16 Uhr vor der Fachschaft (im NW2 neben dem H20) \
@@ -766,7 +766,7 @@ h2 {
           conditions directly on the ballot paper.",
   "h[5]": "{a} can i vote?",
   "p[20]": "The election will take place online from Monday, June 15 2026 12pm to Friday, June 19 2025 12pm at the \
-          <a href="https://forms.uni-bayreuth.de/formcycle/form/alias/1/wahl/" style="color: #FF6400;">Online Voting Plattform</a> \
+          Online Voting Plattform \
           of the University of Bayreuth. \
           If you are eligible to vote at the Faculty MPI, you can cast your vote there. \
           To motivate you, we will give out waffles with powdered sugar on Wednesday from 8am to 4pm infront of the FS (inside NW2, next to H20) for all voters. \
