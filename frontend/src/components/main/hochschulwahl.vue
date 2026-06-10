@@ -470,19 +470,20 @@ export default defineComponent({
 
     const v =
     [
-      "Isabel Hirschmann",
       "Antonia Richthammer",
       "Wilhelm Groba",
-      "Alexander Benzel",
+      "Paul Czerwik",
+      "Lisa Wolf",
+      "Anna Pecher",
       "Sarah Petrik",
       "Jan Wehner",
-      "Paul Czerwik",
-      "Niklas Brütting",
-      "Sven Schnappauf",
-      "Jana Zanter",
-      "Sonja Fleischmann",
+      "Martha Herrmann",
+      "Maarten Weise",
+      "Valentin Wessel",
+      "Marie Schlombs",
+      "Jonathan Hengstermann",
       "Dominik Lieder",
-      "Mortiz Quindt"
+      "Christian Zanter"
     ]
     return { v, stupaWahl, t, getKeyPath: VueRoutes.getKeyPath, extern, kontakt }
   }
@@ -631,10 +632,13 @@ h2 {
           mehrere Stimmen {e} einer Person geben {f}. Die genauen Gegebenheiten findet ihr auch direkt auf dem \
           Wahlzettel.",
   "h[5]": "{a} kann ich wählen?",
-  "p[20]": "Die Wahl findet am 24. Juni 2025 in Präsenz an der Uni Bayreuth statt. \
-          Wenn ihr wahlberechtigt an der Fakultät MPI seid, könnt ihr eure Stimme \
-          im S80 abgeben. Das Wahlbüro ist von 9 Uhr bis 18 Uhr geöffnet. \
-          Zur Motivation backen wir für alle Wähler Waffeln mit Puderzucker. Außerdem schenken wir kostenlosen Kaffee aus!",
+  "p[20]": "Die Wahl findet von Montag, den 15.06.26, ab 12 Uhr bis Freitag, den 19.06.26, 12 Uhr online im \
+          <a href="https://forms.uni-bayreuth.de/formcycle/form/alias/1/wahl/" style="color: #FF6400;">Wahlportal</a>\
+          der Uni Bayreuth statt. \
+          Wenn ihr wahlberechtigt an der Fakultät MPI seid, könnt ihr eure Stimme dort abgeben. \
+          Zur Motivation backen wir am Mittwoch den 17.06. von 8 bis 16 Uhr vor der Fachschaft (im NW2 neben dem H20) \
+          für alle Wählenden Waffeln mit Puderzucker und schenken kostenlosen Kaffee aus! \
+          Ebenfalls gibt es am Mittwoch von 9:30 Uhr bis 10:15 Uhr im AI kostenlosen Kaffee.",
   "p[21]": "Was sonst noch bleibt: Wenn ihr Fragen habt bezüglich der Wahl, helfen \
           wir euch gerne weiter. Unsere Kontaktmöglichkeiten findet ihr {a}.",
   "p[22]": "Sonst bleibt uns nur noch zu sagen: {a} Ihr helft uns und damit \
@@ -761,10 +765,13 @@ h2 {
           also give several votes {e} to one person {f}. You can find the exact \
           conditions directly on the ballot paper.",
   "h[5]": "{a} can i vote?",
-  "p[20]": "The election will take place on June 24, 2025 in presence at the University of Bayreuth. \
-          If you are eligible to vote at the Faculty MPI, you can cast your vote in the S80. \
-          The election office is open from 9 am to 6 pm. To motivate you, we will bake waffles \
-          with powdered sugar for all voters. We will also be serving free coffee!",
+  "p[20]": "The election will take place online from Monday, June 15 2026 12pm to Friday, June 19 2025 12pm at the \
+          <a href="https://forms.uni-bayreuth.de/formcycle/form/alias/1/wahl/" style="color: #FF6400;">Online Voting Plattform</a> \
+          of the University of Bayreuth. \
+          If you are eligible to vote at the Faculty MPI, you can cast your vote there. \
+          To motivate you, we will give out waffles with powdered sugar on Wednesday from 8am to 4pm infront of the FS (inside NW2, next to H20) for all voters. \
+          We will also be serving free coffee! \
+          Additionaly we will be serving free coffee on Wednesday from 9:30am to 10:15am in the AI-building",
   "p[21]": "What else remains: If you have any questions regarding the election, \
           we are happy to help. You can find our contact details {a}.",
   "p[22]": "Otherwise, all that remains for us to say is: {a} \
