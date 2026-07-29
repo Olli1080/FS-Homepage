@@ -14,7 +14,7 @@
         "Physik",
         "Chemie",
         "Mathe",
-        "Computational Mathematics"
+        "Computational Mathematics"
       ],
       "required": true
     }
