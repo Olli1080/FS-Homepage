@@ -190,7 +190,7 @@ export default defineComponent({
       b[6] = [t('liste')],
       b[7] = [t('liste')],
       b[8] = [t('liste')],
-      b[8] = ['NW2']
+      b[9] = ['NW2']
 
 
       //Sommersemestertermine
@@ -328,7 +328,7 @@ export default defineComponent({
   "h[7]": "Erstifrühstück",
   "p[7]": "Ein kleines, aber feines Frühstück in der Uni auf Kosten der \
           Fachschaft.",
-  "dates": "Termine für das Sommersemester 26",
+  "dates": "Termine für das Wintersemester 26/27",
   "event": "Veranstaltung",
   "location": "Ort",
   "ab": "ab",
@@ -407,7 +407,7 @@ export default defineComponent({
           Over foods and drinks you're able to get into conversations with other students.",
   "h[7]": "Freshers breakfast",
   "p[7]": "A small but fine breakfast in the uni at the expense of the student council.",
-  "dates": "Dates for the summer semester 26",
+  "dates": "Dates for the winter semester 26/27",
   "event": "Event",
   "location": "Location",
   "ab": "from",
