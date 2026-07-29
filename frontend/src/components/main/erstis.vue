@@ -140,19 +140,19 @@ export default defineComponent({
     const categories = computed(() => [t('event'), t('location')])
 
     const stunden = computed(() => [
-      /*
-      `07.10 | ${t('ab')} 17:00`,
-      '08.10 | 19:00',
-      '13.10 | 16:15 - 17:00',
+      //Wintersemestertermine
+      '06.10 | ${t('ab')} 16:00',
+      '07.10 | 19:00',
+      '12.10 | tdb',
       '15.10 | 19:00',
-      '16.10 | 19:00',
-      '20.10 | 19:00',
-      '21.10 | 19:00',
-      '22.10 | 19:00',
-      '23.10 | 19:00',
-      '29.10 | 17:00',
-      '07.11 - 09.11'
-      */
+      '19.10 | 19:00',
+      '22.10 | tbd',
+      '29.10 | 19:00',
+      '04.11 | tbd',
+      '06.11 - 08.11'
+      '12.11 | 21:30',
+      //Sommersemestertermine
+      /*
       '13.04 | 10:00',
       '14.04 | 19:00',
       '16.04 | 18:15',
@@ -161,6 +161,7 @@ export default defineComponent({
       //'28.04 | 18:15',
       //'29.04 | 19:00',
       //'05.06 | 18:00'
+      */
     ])
 
     const sprechstunden = computed(() =>
@@ -168,58 +169,44 @@ export default defineComponent({
       let a: TableRow = {}
       let b: TableRow = {}
       //Wintersemestertermine
-      /*
       a[0] = [t('Erstsemestergrillen')]
       a[1] = ['1. ' + t('Kneipentour')],
       a[2] = [t('Tour')],
-      a[3] = ['1. ' + t('buddy')],
-      a[4] = ['2. ' + t('Kneipentour')],
-      a[5] = [t('Sitzung')],
-      a[6] = [t('Spieleabend')],
-      a[7] = ['2. ' + t('buddy')],
-      a[8] = [t('shake')],
-      a[9] = [t('sdf')],
-      a[10] = [t('Wochenende')],
+      a[3] = ['2. ' + t('Kneipentour')],
+      a[4] = [t('Sitzung')],
+      a[5] = [t('Spieleabend')],
+      a[6] = [t('shake')],
+      a[7] = [t('sdf')],
+      a[8] = [t('Wochenende')],
+      a[9] = ['NW2000-Party'],
 
 
       b[0] = [t('nw2Innen')],
-      b[1] = [t("Sternplatz")],
-      b[2] = ['H19 | NW2'],
-      b[3] = ['H20 | NW2'],
-      b[4] = [t("Sternplatz")],
-      b[5] = ['H20 | NW2'],
-      b[6] = ['H36 | NW3'],
-      b[7] = ['H20 | NW2'],
-      b[8] = [t("liste")],
-      b[9] = [t("liste")],
-      b[10] = [t('liste')]
-*/
+      b[1] = [t("Sternplatz_FS")],
+      b[2] = ['tbd'],
+      b[3] = [t("Sternplatz_FS")],
+      b[4] = ['H20 | NW2'],
+      b[5] = ['tbd'],
+      b[6] = [t('liste')],
+      b[7] = [t('liste')],
+      b[8] = [t('liste')],
+      b[8] = ['NW2']
 
 
       //Sommersemestertermine
+      /*
       a[0] = ['Einführungsveranstaltung Informatik mit Campus-Tour und Erstitüten'],
       a[1] = [t('Spieleabend')],
       a[2] = [t('Kneipentour')],
       a[3] = [t('Sitzung')],
-      a[4] = [t('shake')]
-/*
-      a[1] = [t('Sitzung')],
-      a[2] = [t('Spieleabend')],
-      a[3] = [
-        t('shake')
-      ],
-*/
+      a[4] = [t('shake')],
 
       b[0] = ['Ort: H34'],
       b[1] = ['H20'],
       b[2] = ['Vor der Fachschaft oder 19 Uhr Sternplatz. Alle Erstis und Zweitis sind herzlich eingeladen :)'],
       b[3] = ['S80, NWII'],
       b[4] = ['Weitere Infos in dem Fachschafts e-learning Kurs']
-      /*
-      b[1] = ['S80 | NW2, Fachschaftssitzung zum Reinschnuppern'],
-      b[2] = ['H20 | NW2'],
-      b[3] = ['Weitere Informationen im e-learning Kurs der Fachschaft']
-*/
+      */
 
       let z: Table = {}
       z[0] = a
@@ -360,6 +347,7 @@ export default defineComponent({
   "Wochenende": "Ersti-Wochenende",
   "Anmeldung": "Anmeldung E-Learning",
   "Sternplatz": "Treffpunkt: Sternplatz",
+  "Sternplatz_FS": "18:30 Uhr vor der Fachschaft oder 19 Uhr Sternplatz",
   "grillplatz": "städtischer Grillplatz",
   "linkage": "Link im E-Learning",
   "corona": "Es gelten die jeweils aktuellen Corona Regelungen {br} \
@@ -438,6 +426,7 @@ export default defineComponent({
   "Wochenende": "freshers weekend",
   "Anmeldung": "application in E-Learning",
   "Sternplatz": "meeting point: Sternplatz",
+  "Sternplatz_FS": "6:30 PM in front of the Fachschaft or 7 PM at Sternplatz.",
   "grillplatz": "municipal grilling place",
   "linkage": "link in E-Learning",
   "corona": "Corona regulations apply as amended {br} \
