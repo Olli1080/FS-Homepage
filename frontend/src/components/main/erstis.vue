@@ -149,7 +149,7 @@ export default defineComponent({
       '22.10 | tbd',
       '29.10 | 19:00',
       '04.11 | tbd',
-      '06.11 - 08.11'
+      '06.11 - 08.11',
       '12.11 | 21:30',
       //Sommersemestertermine
       /*
@@ -157,7 +157,7 @@ export default defineComponent({
       '14.04 | 19:00',
       '16.04 | 18:15',
       '20.04 | 18:15',
-      'tbd   | 19:00'
+      'tbd   | 19:00',
       //'28.04 | 18:15',
       //'29.04 | 19:00',
       //'05.06 | 18:00'
@@ -169,7 +169,7 @@ export default defineComponent({
       let a: TableRow = {}
       let b: TableRow = {}
       //Wintersemestertermine
-      a[0] = [t('Erstsemestergrillen')]
+      a[0] = [t('Erstsemestergrillen')],
       a[1] = ['1. ' + t('Kneipentour')],
       a[2] = [t('Tour')],
       a[3] = ['2. ' + t('Kneipentour')],
@@ -190,7 +190,7 @@ export default defineComponent({
       b[6] = [t('liste')],
       b[7] = [t('liste')],
       b[8] = [t('liste')],
-      b[8] = ['NW2']
+      b[8] = ['NW2'],
 
 
       //Sommersemestertermine
