@@ -190,7 +190,7 @@ export default defineComponent({
       b[6] = [t('liste')],
       b[7] = [t('liste')],
       b[8] = [t('liste')],
-      b[8] = ['NW2'],
+      b[8] = ['NW2']
 
 
       //Sommersemestertermine
