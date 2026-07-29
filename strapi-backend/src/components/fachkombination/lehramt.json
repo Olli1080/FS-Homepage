@@ -10,7 +10,8 @@
     "schultyp": {
       "type": "enumeration",
       "enum": [
-        "Gymnasium"
+        "Gymnasium",
+        "Realschule"
       ],
       "default": "Gymnasium",
       "required": true

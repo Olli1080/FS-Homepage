@@ -1,5 +1,5 @@
 type Faecher = 'Informatik' | 'Physik' | 'Mathe' | 'Technomathe'
-type Lehramt = 'Gymnasium'
+type Lehramt = 'Gymnasium' | 'Realschule'
 type Grad = 'Bachelor' | 'Master'
 type Feld = 'Science'
 type Rolle = "Chef" | "Vize" | "Finanzen" | "Networking" | "Uni_Kino" | "Oeffentlichkeitsarbeit" | "Bierkoordination" | "Physiker" | "Grafiken" | "Skripten" | "Root"

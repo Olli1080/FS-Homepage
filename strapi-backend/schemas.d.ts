@@ -873,7 +873,7 @@ export interface FachkombinationLehramt extends ComponentSchema {
   };
   attributes: {
     zweitfach: ComponentAttribute<'fachkombination.fach'> & RequiredAttribute;
-    schultyp: EnumerationAttribute<['Gymnasium']> &
+    schultyp: EnumerationAttribute<['Gymnasium', 'Realschule']> &
       RequiredAttribute &
       DefaultTo<'Gymnasium'>;
   };

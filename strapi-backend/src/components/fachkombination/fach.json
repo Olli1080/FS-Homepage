@@ -13,7 +13,8 @@
         "Informatik",
         "Physik",
         "Chemie",
-        "Mathe"
+        "Mathe",
+        "Computational Mathematics"
       ],
       "required": true
     }
