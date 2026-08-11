@@ -11,10 +11,21 @@
       "type": "enumeration",
       "enum": [
         "USA",
-        "UK",
+        "GBR",
         "SWE",
         "DNK",
-        "DE"
+        "DEU",
+        "FRA",
+        "ITA",
+        "ESP",
+        "BEL",
+        "JPN",
+        "KOR",
+        "CHN",
+        "CHE",
+        "VAT",
+        "EU",
+        "ATA"
       ],
       "required": true
     }

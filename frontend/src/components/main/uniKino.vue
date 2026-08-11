@@ -364,11 +364,10 @@ export default defineComponent({
   "cinema": "Uni Kino",
   "p[0]": "Neben der allgemeinen Fachschaftsarbeit organisiert die Fachschaft MPI bereits seit 1992 das Uni-Kino \
           an der Universität Bayreuth. Dort zeigen wir euch während der klassischen Vorlesungszeit, \
-          jeden zweiten Dienstag einen Film im H17 und H18.",
+          jeden zweiten Dienstag einen Film im H17 (OmeU - Original mit englischen Untertiteln) und H18 (DF - Deutsche Fassung).",
   "p[1]": "Die normalerweise mit recht trockenem und mathematischem Stoff assoziierten Hörsäle verwandeln \
           sich an diesen Tagen dank Beamer und großer Soundanlagen in echte Kinosäle! Dabei bieten wir \
-          auch diverse Snacks und Getränke an. In Kooperation mit der FS-Kuwi kann sogar für das perfekte \
-          Kinofeeling ab und an Popcorn angeboten werden.",
+          auch diverse Snacks und Getränke an.",
   "p[2]": "Die gezeigten Filme wurden in den vergangenen Semester stets durch Studierende der Universität \
           mitbestimmt und werden durch vorhergehende Kurzfilme abgerundet.",
   "p[3]": "Und das alles könnt ihr KOSTENLOS erleben!",
@@ -391,11 +390,10 @@ export default defineComponent({
   "cinema": "Uni cinema",
   "p[0]": "In addition to the general student council work, the student council MPI has been organizing the Uni-Cinema \
           at the University of Bayreuth since 1992. There we show you during the classical lecture period, \
-          every second tuesday a film in the H17 and H18.",
+          every second tuesday a film in the H17 (original with english subtitles) and H18 (german version).",
   "p[1]": "The lecture halls normally associated with quite dry and mathematical material are transformed into real movie \
           theaters thanks to beamers and large sound systems! At the same time we \
-          also offer various snacks and drinks. In cooperation with the FS-Kuwi we can even offer popcorn for the perfect \
-          cinema feeling from time to time.",
+          also offer various snacks and drinks.",
   "p[2]": "In past semesters, the films shown have always been co-directed by students at the university and are rounded \
           out by preceding short films.",
   "p[3]": "And you can experience all this for FREE!",
