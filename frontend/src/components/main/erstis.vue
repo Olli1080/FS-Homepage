@@ -105,6 +105,23 @@
             :first-header-cell="{ value: 'Termin', show: 'SMALL' }"
           ></table-comp>
         </div>
+        <br />
+        <i18n-t
+          tag="p"
+          keypath="p[8]"
+        >
+          <template #erstis>
+            <i18n-t
+              tag="a"
+              keypath="erstis"
+              class="link"
+              :href="https://elearning.uni-bayreuth.de/course/section.php?id=275461#module-1650101"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+            </i18n-t>
+          </template>
+        </i18n-t>
         <br /><br />
         <i18n-t
           tag="p"
@@ -143,7 +160,8 @@ export default defineComponent({
       //Wintersemestertermine
       `06.10 | ${t('ab')} 16:00`,
       '07.10 | 19:00',
-      '12.10 | tdb',
+      '12.10 | 16:15',
+      '13.10 | 19:00',
       '15.10 | 19:00',
       '19.10 | 19:00',
       '22.10 | tbd',
@@ -172,25 +190,27 @@ export default defineComponent({
       a[0] = [t('Erstsemestergrillen')],
       a[1] = ['1. ' + t('Kneipentour')],
       a[2] = [t('Tour')],
-      a[3] = ['2. ' + t('Kneipentour')],
-      a[4] = [t('Sitzung')],
-      a[5] = [t('Spieleabend')],
-      a[6] = [t('shake')],
-      a[7] = [t('sdf')],
-      a[8] = [t('Wochenende')],
-      a[9] = ['NW2000-Party'],
+      a[3] = [t('Ersti-Spieleabend')],
+      a[4] = ['2. ' + t('Kneipentour')],
+      a[5] = [t('Sitzung')],
+      a[6] = [t('Interfakultärer Spieleabend')],
+      a[7] = [t('shake')],
+      a[8] = [t('sdf')],
+      a[9] = [t('Wochenende')],
+      a[10] = ['NW2000-Party'],
 
 
       b[0] = [t('nw2Innen')],
       b[1] = [t("Sternplatz_FS")],
-      b[2] = ['tbd'],
-      b[3] = [t("Sternplatz_FS")],
-      b[4] = ['H20 | NW2'],
-      b[5] = ['tbd'],
-      b[6] = [t('liste')],
+      b[2] = ['H18 | NW2'],
+      b[3] = ['H20 | NW2'],
+      b[4] = [t("Sternplatz_FS")],
+      b[5] = ['H20 | NW2'],
+      b[6] = ['tbd'],
       b[7] = [t('liste')],
       b[8] = [t('liste')],
-      b[9] = ['NW2']
+      b[9] = [t('liste')],
+      b[10] = ['NW2']
 
 
       //Sommersemestertermine
@@ -328,6 +348,8 @@ export default defineComponent({
   "h[7]": "Erstifrühstück",
   "p[7]": "Ein kleines, aber feines Frühstück in der Uni auf Kosten der \
           Fachschaft.",
+  "p[8]": "Genauere Infos zu den Veranstaltungen und Anmeldungen findet ihr {erstis}.",
+  "erstis": "hier",
   "dates": "Termine für das Wintersemester 26/27",
   "event": "Veranstaltung",
   "location": "Ort",
@@ -343,6 +365,8 @@ export default defineComponent({
   "Campusabend": "Campusabend",
   "Sitzung": "Erstisitzung",
   "Spieleabend": "Spieleabend",
+  "Ersti-Spieleabend": "Ersti-Spieleabend",
+  "Interfakultärer Spieleabend": "Interfakultärer Spieleabend",
   "buddy": "Buddytreffen",
   "Wochenende": "Ersti-Wochenende",
   "Anmeldung": "Anmeldung E-Learning",
@@ -407,6 +431,8 @@ export default defineComponent({
           Over foods and drinks you're able to get into conversations with other students.",
   "h[7]": "Freshers breakfast",
   "p[7]": "A small but fine breakfast in the uni at the expense of the student council.",
+  "p[8]": "More informationen to the events and the registrations are found {erstis}.",
+  "erstis": "here",
   "dates": "Dates for the winter semester 26/27",
   "event": "Event",
   "location": "Location",
@@ -421,7 +447,9 @@ export default defineComponent({
   "Immatrikulationsstunde": "immatriculation hour",
   "Campusabend": "campus evening",
   "Sitzung": "freshers conference",
-  "Spieleabend": "games evening",
+  "Spieleabend": "games night",
+  "Ersti-Spieleabend": "freshers games night",
+  "Interfakultärer Spieleabend": "interfaculty games night",
   "buddy": "buddy meeting",
   "Wochenende": "freshers weekend",
   "Anmeldung": "application in E-Learning",
