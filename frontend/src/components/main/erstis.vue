@@ -115,7 +115,7 @@
               tag="a"
               keypath="erstis"
               class="link"
-              :href="https://elearning.uni-bayreuth.de/course/section.php?id=275461#module-1650101"
+              href="https://elearning.uni-bayreuth.de/course/section.php?id=275461#module-1650101"
               target="_blank"
               rel="noopener noreferrer"
             >
