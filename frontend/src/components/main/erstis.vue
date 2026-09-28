@@ -413,11 +413,11 @@ export default defineComponent({
           How does it work? For one thing is the door to the student council naturally open for everyone \
           no matter if it's about concrete questions and problems or just to relax a bit. For the other is the student council organizing events just for freshman to get to know each other. \
           The freshman-events",
-  "h[3]": "Buddy-System (and game evenings)",
+  "h[3]": "Buddy-System (and game nights)",
   "p[3]": "This is a support system for freshman whereby every freshman which wants to participate gets a student of a higher semester assigned (of the same field of study in the best case). \
           Your budy will gladly help you with your questions regarding the organization of your studies especially since it can be somewhat confusing in the beginning. \
           Furthermore there will be some games evenings or similar offered where your able to get to know nice people from your faculty 😃",
-  "h[4]": "Pub crawls",
+  "h[4]": "Pub Crawls",
   "p[4]": "We're always organizing at least one pub crawls for all freshman at the beginning of the semester. \
           On one evening you'll be visiting three to four pubs of Bayreuth in small groups. \
           In doing so you're not only able to see the town and get to know its offers but also the other freshman and the student council.",
@@ -426,10 +426,10 @@ export default defineComponent({
           are driving with all the freshers which feel like it to a accommodation near Bayreuth to spend the weekend together. \
           In order that no one's getting bored there's naturally a extensive program to keep everyone on their toes. \
           But it's also super usefull to simply relax a bit and to get to know some people from your own semester and some members of the student council.",
-  "h[6]": "Freshers grilling",
-  "p[6]": "Naturally we're not grilling the freshers but rather with the freshers 😉. \
+  "h[6]": "Freshmen BBQ",
+  "p[6]": "Naturally we're not grilling the freshmen but rather with the freshmen 😉. \
           Over foods and drinks you're able to get into conversations with other students.",
-  "h[7]": "Freshers breakfast",
+  "h[7]": "Freshmen Breakfast",
   "p[7]": "A small but fine breakfast in the uni at the expense of the student council.",
   "p[8]": "More informationen to the events and the registrations are found {erstis}.",
   "erstis": "here",
@@ -437,26 +437,26 @@ export default defineComponent({
   "event": "Event",
   "location": "Location",
   "ab": "from",
-  "Erstsemestergrillen": "freshman grilling",
-  "Kneipentour": "pub crawl",
-  "Tour": "orientation & campus tour",
+  "Erstsemestergrillen": "Freshman BBQ",
+  "Kneipentour": "Pub Crawl",
+  "Tour": "Orientation Event & Campus Tour",
   "Einführung": "Introduction",
   "Vorstellung": "Introduction of the student council",
   "Führung": "guided campus tour",
-  "Erstitüten": "freshers bags",
+  "Erstitüten": "Freshmen bags",
   "Immatrikulationsstunde": "immatriculation hour",
-  "Campusabend": "campus evening",
-  "Sitzung": "freshers conference",
-  "Spieleabend": "games night",
-  "Ersti-Spieleabend": "freshers games night",
-  "Interfakultärer Spieleabend": "interfaculty games night",
-  "buddy": "buddy meeting",
-  "Wochenende": "freshers weekend",
+  "Campusabend": "Campus Evening",
+  "Sitzung": "Freshman Conference",
+  "Spieleabend": "Game Night",
+  "Ersti-Spieleabend": "Freshmen Game Night",
+  "Interfakultärer Spieleabend": "Interfaculty Game Night",
+  "buddy": "Buddy Meeting",
+  "Wochenende": "Freshmen Weekend",
   "Anmeldung": "application in e-Learning",
   "Sternplatz": "meeting point: Sternplatz",
   "Sternplatz_FS": "6:30 PM in front of the Fachschaft or 7 PM at Sternplatz.",
   "grillplatz": "municipal grilling place",
-  "linkage": "link in e-Learning",
+  "linkage": "Link in e-Learning",
   "corona": "Corona regulations apply as amended {br} \
             The application in e-Learning takes place through the course of the student council \
             {link}",
@@ -465,11 +465,11 @@ export default defineComponent({
           If there are any open questions feel free to visit our office (NW II, between H 20 \
           and S 78) where you can paint yourself a picture of the beautiful campus uni Bayreuth and the here settled student council. \
           Or if you're coming from farther away or if there's no possibility of direct contact leave us a mail ({mail}).",
-  "fachschaft": "Student council",
-  "sdf": "Battle of the faculties",
+  "fachschaft": "Student Council",
+  "sdf": "Battle of the Faculties",
   "frühstück": "Breakfast",
-  "shake": "shake course",
-  "nw2Innen": "NW2-inner courtyard",
-  "liste": "registration in front of the fachschaft"
+  "shake": "Mixology Course",
+  "nw2Innen": "NW2-Inner courtyard",
+  "liste": "Application via list in front of the fachschaft"
 }
 </i18n>
