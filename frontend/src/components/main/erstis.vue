@@ -412,13 +412,13 @@ export default defineComponent({
           So freshman are able to get to know older students which are able to give good advice. \
           How does it work? For one thing is the door to the student council naturally open for everyone \
           no matter if it's about concrete questions and problems or just to relax a bit. For the other is the student council organizing events just for freshman to get to know each other. \
-          The freshman-events",
+          The freshmen-events",
   "h[3]": "Buddy-System (and game nights)",
   "p[3]": "This is a support system for freshman whereby every freshman which wants to participate gets a student of a higher semester assigned (of the same field of study in the best case). \
           Your budy will gladly help you with your questions regarding the organization of your studies especially since it can be somewhat confusing in the beginning. \
           Furthermore there will be some games evenings or similar offered where your able to get to know nice people from your faculty 😃",
   "h[4]": "Pub Crawls",
-  "p[4]": "We're always organizing at least one pub crawls for all freshman at the beginning of the semester. \
+  "p[4]": "We're always organizing at least one pub crawls for all freshmen at the beginning of the semester. \
           On one evening you'll be visiting three to four pubs of Bayreuth in small groups. \
           In doing so you're not only able to see the town and get to know its offers but also the other freshman and the student council.",
   "h[5]": "Freshers weekend",
@@ -437,7 +437,7 @@ export default defineComponent({
   "event": "Event",
   "location": "Location",
   "ab": "from",
-  "Erstsemestergrillen": "Freshman BBQ",
+  "Erstsemestergrillen": "Freshmen BBQ",
   "Kneipentour": "Pub Crawl",
   "Tour": "Orientation Event & Campus Tour",
   "Einführung": "Introduction",
@@ -446,7 +446,7 @@ export default defineComponent({
   "Erstitüten": "Freshmen bags",
   "Immatrikulationsstunde": "immatriculation hour",
   "Campusabend": "Campus Evening",
-  "Sitzung": "Freshman Conference",
+  "Sitzung": "Freshmen Conference",
   "Spieleabend": "Game Night",
   "Ersti-Spieleabend": "Freshmen Game Night",
   "Interfakultärer Spieleabend": "Interfaculty Game Night",
