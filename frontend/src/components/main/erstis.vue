@@ -207,9 +207,9 @@ export default defineComponent({
       b[4] = [t("Sternplatz_FS")],
       b[5] = ['H20 | NW2'],
       b[6] = ['tbd'],
-      b[7] = [t('liste')],
-      b[8] = [t('liste')],
-      b[9] = [t('liste')],
+      b[7] = [t('Anmeldung')],
+      b[8] = [t('Anmeldung')],
+      b[9] = [t('Anmeldung')],
       b[10] = ['NW2']
 
 
@@ -225,7 +225,7 @@ export default defineComponent({
       b[1] = ['H20'],
       b[2] = ['Vor der Fachschaft oder 19 Uhr Sternplatz. Alle Erstis und Zweitis sind herzlich eingeladen :)'],
       b[3] = ['S80, NWII'],
-      b[4] = ['Weitere Infos in dem Fachschafts e-learning Kurs']
+      b[4] = ['Weitere Infos in dem Fachschafts e-Learning Kurs']
       */
 
       let z: Table = {}
@@ -369,13 +369,13 @@ export default defineComponent({
   "Interfakultärer Spieleabend": "Interfakultärer Spieleabend",
   "buddy": "Buddytreffen",
   "Wochenende": "Ersti-Wochenende",
-  "Anmeldung": "Anmeldung E-Learning",
+  "Anmeldung": "Anmeldung im e-Learning",
   "Sternplatz": "Treffpunkt: Sternplatz",
   "Sternplatz_FS": "18:30 Uhr vor der Fachschaft oder 19 Uhr Sternplatz",
   "grillplatz": "städtischer Grillplatz",
-  "linkage": "Link im E-Learning",
+  "linkage": "Link im e-Learning",
   "corona": "Es gelten die jeweils aktuellen Corona Regelungen {br} \
-            Die Anmeldung im E-Learning findet im Kurs der Fachschaft statt \
+            Die Anmeldung im e-Learning findet im Kurs der Fachschaft statt \
             {link}",
   "p[n]": "Ihr seht also, es gibt viele gute Gründe, nach Bayreuth zu kommen und \
           wir als Fachschaft geben unser Bestes, euch den Einstieg in euer \
@@ -452,13 +452,13 @@ export default defineComponent({
   "Interfakultärer Spieleabend": "interfaculty games night",
   "buddy": "buddy meeting",
   "Wochenende": "freshers weekend",
-  "Anmeldung": "application in E-Learning",
+  "Anmeldung": "application in e-Learning",
   "Sternplatz": "meeting point: Sternplatz",
   "Sternplatz_FS": "6:30 PM in front of the Fachschaft or 7 PM at Sternplatz.",
   "grillplatz": "municipal grilling place",
-  "linkage": "link in E-Learning",
+  "linkage": "link in e-Learning",
   "corona": "Corona regulations apply as amended {br} \
-            The application in E-Learning takes place through the course of the student council \
+            The application in e-Learning takes place through the course of the student council \
             {link}",
   "p[n]": "As you can see there's a lot of sound reasons to go to Bayreuth and we \
           as the student council will do our best to make your entry to your studies as easy as possible. \
