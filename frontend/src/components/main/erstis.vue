@@ -158,7 +158,7 @@ export default defineComponent({
 
     const stunden = computed(() => [
       //Wintersemestertermine
-      `06.10 | ${t('ab')} 16:00`,
+      `06.10 | ${t('ab')} 17:00`,
       '07.10 | 19:00',
       '12.10 | 16:15',
       '13.10 | 19:00',
