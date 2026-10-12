@@ -202,7 +202,7 @@ export default defineComponent({
 
       b[0] = [t('nw2Innen')],
       b[1] = [t("Sternplatz_FS")],
-      b[2] = ['H18 | NW2'],
+      b[2] = ['H19 | NW2'],
       b[3] = ['H20 | NW2'],
       b[4] = [t("Sternplatz_FS")],
       b[5] = ['H20 | NW2'],
