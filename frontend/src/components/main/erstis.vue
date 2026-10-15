@@ -209,7 +209,7 @@ export default defineComponent({
       b[6] = ['NW3'],
       b[7] = [t('Anmeldung')],
       b[8] = [t('Anmeldung')],
-      b[9] = [t('AnmeldungVorbesprechung')],
+      b[9] = [t('AnmeldungundVorbesprechung')],
       b[10] = ['NW2']
 
 
@@ -370,7 +370,7 @@ export default defineComponent({
   "buddy": "Buddytreffen",
   "Wochenende": "Ersti-Wochenende",
   "Anmeldung": "Anmeldung im e-Learning",
-  "AnmeldungVorbesprechung": "Anmeldung im e-Learning | Vorbesprechung Di 27.10.26 18 Uhr im H20",
+  "AnmeldungundVorbesprechung": "Anmeldung im e-Learning | Vorbesprechung Di 27.10.26 18 Uhr im H20",
   "Sternplatz": "Treffpunkt: Sternplatz",
   "Sternplatz_FS": "18:30 Uhr vor der Fachschaft oder 19 Uhr Sternplatz",
   "grillplatz": "städtischer Grillplatz",
@@ -454,7 +454,7 @@ export default defineComponent({
   "buddy": "Buddy Meeting",
   "Wochenende": "Freshmen Weekend",
   "Anmeldung": "application in e-Learning",
-  "AnmeldungVorbesprechung": "application in e-Learning | preliminary meeting Tue 27.10.26 6pm in H20",
+  "AnmeldungundVorbesprechung": "application in e-Learning | preliminary meeting Tue 27.10.26 6pm in H20",
   "Sternplatz": "meeting point: Sternplatz",
   "Sternplatz_FS": "6:30 PM in front of the Fachschaft or 7 PM at Sternplatz.",
   "grillplatz": "municipal grilling place",
