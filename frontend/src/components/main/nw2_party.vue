@@ -314,7 +314,7 @@ export default defineComponent({
           Let the rich bass lines from music spanning the turn of the millennium massage your ears, \
           while you admire the artistry of our bartenders at the Physikerbar. 🍹",
   "p[5]": "Prices: Cocktails 5-7€, beer 3.50€, soft drinks 2€",
-  "p[6]": "There will also be pretzels, cheese sticks, and Leberkäs sandwiches (while supplies last).",
+  "p[6]": "There will also be pretzels, cheese sticks, and Leberkaes sandwiches (while supplies last).",
   "p[7]": "SPECIALS: Beer for 2€ during the first hour and 5 shots for 5€, 11 shots for 10€ all night ^^",
   "p[8]": "18+ only!!! ID check at the door! 🔞",
   "p[9]": "We're looking forward to seeing you, so: Join us on Nov 12, 2026 to get this party started!",
