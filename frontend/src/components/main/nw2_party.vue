@@ -13,10 +13,9 @@
             keypath="p[1]"
           ></i18n-t>
           <div style="height: 1.5em;"></div>
-          <i18n-t
-            tag="p"
-            keypath="p[2]"
-          ></i18n-t>
+          <p v-if="date && hour">
+            {{ t('p[2]', {date, hour}) }}
+          </p>
           <div style="height: 1.5em;"></div>
           <i18n-t
             tag="p"
@@ -26,11 +25,6 @@
           <i18n-t
             tag="p"
             keypath="p[4]"
-          ></i18n-t>
-          <div style="height: 1.5em;"></div>
-          <i18n-t
-            tag="p"
-            keypath="p[5]"
           ></i18n-t>
           <div style="height: 1.5em;"></div>
           <div class="tw-flex tw-justify-center">
@@ -261,38 +255,25 @@ export default defineComponent({
 
 <i18n locale="de">
 {
-  "p[0]": "Bayreuths beste Studentenparty findet am Donnerstag, den {day}. {month} 2026 statt! \
-    	    Gefeiert wird im NWII-Gebäude, aber der Einlass erfolgt ab 21:30 Uhr über den Innenhof.",
-  "p[1]": "Abendkasse 8€",
-  "p[2]": "Vorverkauf nur 7€",
-  "p[3]": "Do 29.10., Mi 04.11. und Di 10.11. (jeweils von 11:00-13:00 Uhr)",
-  "p[4]": "Auch dieses Semester feiern wir unter dem Motto NW2000-Party mit euch! \
-          Lasst eure Ohren von satten Bässen quer durch die Musik ab der Jahrtausendwende massieren, \
+  "p[0]": "Am {day}.{month} findet endlich wieder eine Party im NWII Gebäude statt.\ 
+    	    Auch dieses Semester feiern wir unter dem Motto NW2000-Party mit euch!",
+  "p[1]": "Lasst eure Ohren von satten Bässen quer durch die Musik der 2000er massieren, \
           während ihr an der Physikerbar die Künste unserer Shaker bewundert.🍹",
-  "p[5]": "Preise: Cocktails 5-7€, Bier 3,50€, Softdrinks 2€",
-  "p[6]": "Zudem gibt es Brezen, Käsestangen und Leberkässemmeln (nur solange der Vorrat reicht).",
-  "p[7]": "SPECIALS: Bier für 2€ in der 1. Stunde und 5 Shots für 5€, 11 Shots für 10€ all night ^^",
-  "p[8]": "Einlass ab 18 Jahren!!! Ausweiskontrolle am Eingang! 🔞",
-  "p[9]": "Wir freuen uns auf euch, also: Join us on Nov 12th 2026 to get this party started!",
-  "p[10]": "#NW2000-Party #Musik: alles ab der Jahrtausendwende #NWII-Gebäude #Bayreuth #UniBayreuth #UniParty #BesteUniPartyBayreuth"
+  "p[2]": "Los geht's am {date} um {hour} Uhr und in der ersten Stunde kann mit Bier für 1,5€ \
+          ordentlich angeheizt werden!",
+  "p[3]": "Wir freuen uns auf euer Erscheinen, also: Let's get it started, Huh!",
+  "p[4]": "Einlass ab 18 Jahren 🔞 Ort: NW2 - Uni Bayreuth"
 }
 </i18n>
 
 <i18n locale="en">
 {
-  "p[0]": "Bayreuth's best student party takes place on Thursday, {day}, {month}, 2026! \
-            The party will be held in the NWII building, but admission begins at 9:30 p.m. via the courtyard.",
-  "p[1]": "Box office tickets at the entrance: 8€",
-  "p[2]": "Advance tickets: only 7€",
-  "p[3]": "Thu, Oct. 29; Wed, Nov. 4; and Tue, Nov. 10 (11:00 a.m.-1:00 p.m. each day)",
-  "p[4]": "This semester, we're celebrating with you again under the theme 'NW2000 Party'! \
-          Let the rich bass lines from music spanning the turn of the millennium massage your ears, \
-          while you admire the artistry of our bartenders at the Physikerbar. 🍹",
-  "p[5]": "Prices: Cocktailse 5-7€, beer 3.50€, soft drinks 2€",
-  "p[6]": "There will also be pretzels, cheese sticks, and Leberkaes sandwiches (while supplies last).",
-  "p[7]": "SPECIALS: Beer for 2€ during the first hour and 5 shots for 5€, 11 shots for 10€ all night ^^",
-  "p[8]": "18+ only!!! ID check at the door! 🔞",
-  "p[9]": "We're looking forward to seeing you, so: Join us on Nov 12, 2026 to get this party started!",
-  "p[10]": "#NW2000Party #Music: everything since the turn of the millennium #NWIIBuilding #Bayreuth #UniBayreuth #UniParty #BestUniPartyBayreuth"
+  "p[0]": "On {month} {day}, there will finally be a party on he NWII- building again.\
+           This semester we will be partying under the motto NW2000- party!",
+  "p[1]": "Let your ears be massaged by rich basses across the music of the 2000s, \
+          while you admire the arts of our shakers at the physicist bar.🍹",
+  "p[2]": "It starts on {date} at {hour} and in the first hour can be properly heated with beer for 1.5€!",
+  "p[3]": "We look forward to seeing you there,so: Let's get it started, Huh!",
+  "p[4]": "Minimum Age 18+ 🔞 location: NW2 - Uni Bayreuth"
 }
 </i18n>
