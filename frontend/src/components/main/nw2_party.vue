@@ -286,8 +286,8 @@ export default defineComponent({
 
 <i18n locale="de">
 {
-  "p[0]": "Bayreuths beste Studentenparty findet am Donnerstag, den {day}. {month} 2026 statt! \
-    	    Gefeiert wird im NWII-Gebäude, aber der Einlass erfolgt ab 21:30 Uhr über den Innenhof.",
+  "p[0]": "Am {day}.{month} findet endlich wieder eine Party im NWII Gebäude statt.\ 
+    	    Auch dieses Semester feiern wir unter dem Motto NW2000-Party mit euch!",
   "p[1]": "Abendkasse 8€",
   "p[2]": "Vorverkauf nur 7€",
   "p[3]": "Do 29.10., Mi 04.11. und Di 10.11. (jeweils von 11:00-13:00 Uhr)",
@@ -305,7 +305,8 @@ export default defineComponent({
 
 <i18n locale="en">
 {
-  "p[0]": "test",
+  "p[0]": "On {month} {day}, there will finally be a party on he NWII- building again.\
+           This semester we will be partying under the motto NW2000- party!",
   "p[1]": "test2",
   "p[2]": "test3",
   "p[3]": "test4",
