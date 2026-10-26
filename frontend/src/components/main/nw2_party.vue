@@ -296,7 +296,7 @@ export default defineComponent({
           während ihr an der Physikerbar die Künste unserer Shaker bewundert.🍹",
   "p[5]": "Preise: Cocktails 5-7€, Bier 3,50€, Softdrinks 2€",
   "p[6]": "Zudem gibt es Brezen, Käsestangen und Leberkässemmeln (nur solange der Vorrat reicht).",
-  "p[7]": "SPECIALS: Bier für 2€ in der 1. Stunde und 5 Shots für 5€, 11 Shots für 10€ all night ^^",
+  "p[7]": "SPECIALS: Bier für 2€ in der 1. Stunde und 5 Shots für 5€, 11 Shots für 10€ all night",
   "p[8]": "Einlass ab 18 Jahren!!! Ausweiskontrolle am Eingang! 🔞",
   "p[9]": "Wir freuen uns auf euch, also: Join us on Nov 12th 2026 to get this party started!",
   "p[10]": "#NW2000-Party #Musik: alles ab der Jahrtausendwende #NWII-Gebäude #Bayreuth #UniBayreuth #UniParty #BesteUniPartyBayreuth"
@@ -305,19 +305,16 @@ export default defineComponent({
 
 <i18n locale="en">
 {
-  "p[0]": "Bayreuth's best student party takes place on Thursday, {day}, {month}, 2026! \
-            The party will be held in the NWII building, but admission begins at 9:30 p.m. via the courtyard.",
-  "p[1]": "Box office tickets at the entrance: 8€",
-  "p[2]": "Advance tickets: only 7€",
-  "p[3]": "Thu, Oct. 29; Wed, Nov. 4; and Tue, Nov. 10 (11:00 a.m.-1:00 p.m. each day)",
-  "p[4]": "This semester, we're celebrating with you again under the theme 'NW2000 Party'! \
-          Let the rich bass lines from music spanning the turn of the millennium massage your ears, \
-          while you admire the artistry of our bartenders at the Physikerbar. 🍹",
-  "p[5]": "Prices: Cocktails 5-7€, beer 3.50€, soft drinks 2€",
-  "p[6]": "There will also be pretzels, cheese sticks, and Leberkaes sandwiches (while supplies last).",
-  "p[7]": "SPECIALS: Beer for 2€ during the first hour and 5 shots for 5€, 11 shots for 10€ all night ^^",
-  "p[8]": "18+ only!!! ID check at the door! 🔞",
-  "p[9]": "We're looking forward to seeing you, so: Join us on Nov 12, 2026 to get this party started!",
-  "p[10]": "#NW2000Party #Music: everything since the turn of the millennium #NWIIBuilding #Bayreuth #UniBayreuth #UniParty #BestUniPartyBayreuth"
+  "p[0]": "test",
+  "p[1]": "test2",
+  "p[2]": "test3",
+  "p[3]": "test4",
+  "p[4]": "test5",
+  "p[5]": "test6",
+  "p[6]": "test7",
+  "p[7]": "test8",
+  "p[8]": "test9",
+  "p[9]": "test10",
+  "p[10]": "test11"
 }
 </i18n>
