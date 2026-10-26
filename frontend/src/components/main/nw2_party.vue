@@ -16,7 +16,7 @@
           <p v-if="date && hour">
             {{ t('p[2]', {date, hour}) }}
           </p>
-          <div style="height: 1.5em;"></div>
+          <div style="height: 0em;"></div>
           <i18n-t
             tag="p"
             keypath="p[3]"
@@ -29,11 +29,11 @@
             tag="p"
             keypath="p[5]"
           ></i18n-t>
-          <div style="height: 1.5em;"></div><i18n-t
+          <div style="height: 0em;"></div><i18n-t
             tag="p"
             keypath="p[6]"
           ></i18n-t>
-          <div style="height: 1.5em;"></div><i18n-t
+          <div style="height: 0em;"></div><i18n-t
             tag="p"
             keypath="p[7]"
           ></i18n-t>
@@ -41,7 +41,7 @@
             tag="p"
             keypath="p[8]"
           ></i18n-t>
-          <div style="height: 1.5em;"></div><i18n-t
+          <div style="height: 0em;"></div><i18n-t
             tag="p"
             keypath="p[9]"
           ></i18n-t>
