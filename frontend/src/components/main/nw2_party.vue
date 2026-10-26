@@ -20,11 +20,15 @@
           <i18n-t
             tag="p"
             keypath="p[3]"
+          ></i18n-t><div style="height: 1.5em;"></div>
+          <i18n-t
+            tag="p"
+            keypath="p[4]"
           ></i18n-t>
           <div style="height: 1.5em;"></div>
           <i18n-t
             tag="p"
-            keypath="p[4]"
+            keypath="p[5]"g
           ></i18n-t>
           <div style="height: 1.5em;"></div>
           <div class="tw-flex tw-justify-center">
@@ -262,7 +266,8 @@ export default defineComponent({
   "p[2]": "Los geht's am {date} um {hour} Uhr und in der ersten Stunde kann mit Bier für 1,5€ \
           ordentlich angeheizt werden!",
   "p[3]": "Wir freuen uns auf euer Erscheinen, also: Let's get it started, Huh!",
-  "p[4]": "Einlass ab 18 Jahren 🔞 Ort: NW2 - Uni Bayreuth"
+  "p[4]": "Einlass ab 18 Jahren 🔞 Ort: NW2 - Uni Bayreuth",
+  "p[5]": "Test"
 }
 </i18n>
 
@@ -274,6 +279,7 @@ export default defineComponent({
           while you admire the arts of our shakers at the physicist bar.🍹",
   "p[2]": "It starts on {date} at {hour} and in the first hour can be properly heated with beer for 1.5€!",
   "p[3]": "We look forward to seeing you there,so: Let's get it started, Huh!",
-  "p[4]": "Minimum Age 18+ 🔞 location: NW2 - Uni Bayreuth"
+  "p[4]": "Minimum Age 18+ 🔞 location: NW2 - Uni Bayreuth",
+  "p[5]": "Test"
 }
 </i18n>
