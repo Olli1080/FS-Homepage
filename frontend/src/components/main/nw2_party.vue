@@ -28,36 +28,6 @@
             keypath="p[4]"
           ></i18n-t>
           <div style="height: 1.5em;"></div>
-          <i18n-t
-            tag="p"
-            keypath="p[5]"
-          ></i18n-t>
-          <div style="height: 1.5em;"></div>
-          <i18n-t
-            tag="p"
-            keypath="p[6]"
-          ></i18n-t>
-          <div style="height: 1.5em;"></div>
-          <i18n-t
-            tag="p"
-            keypath="p[7]"
-          ></i18n-t>
-          <div style="height: 1.5em;"></div>
-          <i18n-t
-            tag="p"
-            keypath="p[8]"
-          ></i18n-t>
-          <div style="height: 1.5em;"></div>
-          <i18n-t
-            tag="p"
-            keypath="p[9]"
-          ></i18n-t>
-          <div style="height: 1.5em;"></div>
-          <i18n-t
-            tag="p"
-            keypath="p[10]"
-          ></i18n-t>
-          <div style="height: 1.5em;"></div>
           <div class="tw-flex tw-justify-center">
             <img
               v-if="image"
