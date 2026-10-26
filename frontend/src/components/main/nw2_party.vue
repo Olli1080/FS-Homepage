@@ -309,11 +309,11 @@ export default defineComponent({
             The party will be held in the NWII building, but admission begins at 9:30 p.m. via the courtyard.",
   "p[1]": "Box office tickets at the entrance: 8€",
   "p[2]": "Advance tickets: only 7€",
-  "p[3]": "Thu, Oct. 29; Wed, Nov. 4; and Tue, Nov. 10 (11:00 a.m.–1:00 p.m. each day)" ,
+  "p[3]": "Thu, Oct. 29; Wed, Nov. 4; and Tue, Nov. 10 (11:00 a.m.-1:00 p.m. each day)",
   "p[4]": "This semester, we're celebrating with you again under the theme 'NW2000 Party'! \
           Let the rich bass lines from music spanning the turn of the millennium massage your ears, \
           while you admire the artistry of our bartenders at the Physikerbar. 🍹",
-  "p[5]": "Prices: Cocktails 5–7€, beer 3.50€, soft drinks 2€",
+  "p[5]": "Prices: Cocktails 5-7€, beer 3.50€, soft drinks 2€",
   "p[6]": "There will also be pretzels, cheese sticks, and Leberkäs sandwiches (while supplies last).",
   "p[7]": "SPECIALS: Beer for 2€ during the first hour and 5 shots for 5€, 11 shots for 10€ all night ^^",
   "p[8]": "18+ only!!! ID check at the door! 🔞",
