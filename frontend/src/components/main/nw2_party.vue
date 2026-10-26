@@ -7,25 +7,25 @@
           <p v-if="day && month">
             {{ t('p[0]', { day, month }) }}
           </p>
-          <div style="height: 1.5em;"></div>
+          <div style="height: 0em;"></div>
           <i18n-t
             tag="p"
             keypath="p[1]"
           ></i18n-t>
-          <div style="height: 1.5em;"></div>
+          <div style="height: 0em;"></div>
           <p v-if="date && hour">
             {{ t('p[2]', {date, hour}) }}
           </p>
-          <div style="height: 0em;"></div>
+          <div style="height: 1.5em;"></div>
           <i18n-t
             tag="p"
             keypath="p[3]"
-          ></i18n-t><div style="height: 1.5em;"></div>
+          ></i18n-t><div style="height: 0em;"></div>
           <i18n-t
             tag="p"
             keypath="p[4]"
           ></i18n-t>
-          <div style="height: 1.5em;"></div><i18n-t
+          <div style="height: 0em;"></div><i18n-t
             tag="p"
             keypath="p[5]"
           ></i18n-t>
@@ -33,22 +33,27 @@
             tag="p"
             keypath="p[6]"
           ></i18n-t>
-          <div style="height: 0em;"></div><i18n-t
+          <div style="height: 1.5em;"></div><i18n-t
             tag="p"
             keypath="p[7]"
           ></i18n-t>
-          <div style="height: 1.5em;"></div><i18n-t
+          <div style="height: 0em;"></div><i18n-t
             tag="p"
             keypath="p[8]"
           ></i18n-t>
-          <div style="height: 0em;"></div><i18n-t
+          <div style="height: 1.5em;"></div><i18n-t
             tag="p"
             keypath="p[9]"
+          ></i18n-t>
+          <div style="height: 0em;"></div>
+          <i18n-t
+            tag="p"
+            keypath="p[10]"
           ></i18n-t>
           <div style="height: 1.5em;"></div>
           <i18n-t
             tag="p"
-            keypath="p[10]"
+            keypath="p[11]"
           ></i18n-t>
           <div style="height: 1.5em;"></div>
           <div class="tw-flex tw-justify-center">
@@ -279,38 +284,38 @@ export default defineComponent({
 
 <i18n locale="de">
 {
-  "p[0]": "Bayreuths beste Studentenparty findet am Donnerstag, den {day}. {month} 2026 statt! \
-    	    Gefeiert wird im NWII-Gebäude, aber der Einlass erfolgt ab 21:30 Uhr über den Innenhof.",
-  "p[1]": "Abendkasse 8€",
-  "p[2]": "Vorverkauf nur 7€",
-  "p[3]": "Do 29.10., Mi 04.11. und Di 10.11. (jeweils von 11:00-13:00 Uhr)",
-  "p[4]": "Auch dieses Semester feiern wir unter dem Motto NW2000-Party mit euch! \
+  "p[0]": "Bayreuths beste Studentenparty findet am Donnerstag, den {day}. {month} 2026 statt!",
+  "p[1]": "Gefeiert wird im NWII-Gebäude, aber der Einlass erfolgt ab 21:30 Uhr über den Innenhof.",
+  "p[2]": "Abendkasse 8€",
+  "p[3]": "Vorverkauf nur 7€",
+  "p[4]": "Do 29.10., Mi 04.11. und Di 10.11. (jeweils von 11:00-13:00 Uhr)",
+  "p[5]": "Auch dieses Semester feiern wir unter dem Motto NW2000-Party mit euch! \
           Lasst eure Ohren von satten Bässen quer durch die Musik ab der Jahrtausendwende massieren, \
           während ihr an der Physikerbar die Künste unserer Shaker bewundert.🍹",
-  "p[5]": "Preise: Cocktails 5-7€, Bier 3,50€, Softdrinks 2€",
-  "p[6]": "Zudem gibt es Brezen, Käsestangen und Leberkässemmeln (nur solange der Vorrat reicht).",
-  "p[7]": "SPECIALS: Bier für 2€ in der 1. Stunde und 5 Shots für 5€, 11 Shots für 10€ all night ^^",
-  "p[8]": "Einlass ab 18 Jahren!!! Ausweiskontrolle am Eingang! 🔞",
-  "p[9]": "Wir freuen uns auf euch, also: Join us on Nov 12th 2026 to get this party started!",
-  "p[10]": "#NW2000-Party #Musik: alles ab der Jahrtausendwende #NWII-Gebäude #Bayreuth #UniBayreuth #UniParty #BesteUniPartyBayreuth"
+  "p[6]": "Preise: Cocktails 5-7€, Bier 3,50€, Softdrinks 2€",
+  "p[7]": "Zudem gibt es Brezen, Käsestangen und Leberkässemmeln (nur solange der Vorrat reicht).",
+  "p[8]": "SPECIALS: Bier für 2€ in der 1. Stunde und 5 Shots für 5€, 11 Shots für 10€ all night ^^",
+  "p[9]": "Einlass ab 18 Jahren!!! Ausweiskontrolle am Eingang! 🔞",
+  "p[10]": "Wir freuen uns auf euch, also: Join us on Nov 12th 2026 to get this party started!",
+  "p[11]": "#NW2000-Party #Musik: alles ab der Jahrtausendwende #NWII-Gebäude #Bayreuth #UniBayreuth #UniParty #BesteUniPartyBayreuth"
 }
 </i18n>
 
 <i18n locale="en">
 {
-  "p[0]": "Bayreuth's best student party takes place on Thursday, {day}, {month}, 2026! \
-            The party will be held in the NWII building, but admission begins at 9:30 p.m. via the courtyard.",
-  "p[1]": "Box office tickets at the entrance: 8€",
-  "p[2]": "Advance tickets: only 7€",
-  "p[3]": "Thu, Oct. 29; Wed, Nov. 4; and Tue, Nov. 10 (11:00 a.m.-1:00 p.m. each day)",
-  "p[4]": "This semester, we're celebrating with you again under the theme 'NW2000 Party'! \
+  "p[0]": "Bayreuth's best student party takes place on Thursday, {day}, {month}, 2026!",
+  "p[1]": "The party will be held in the NWII building, but admission begins at 9:30 p.m. via the courtyard.",
+  "p[2]": "Box office tickets at the entrance: 8€",
+  "p[3]": "Advance tickets: only 7€",
+  "p[4]": "Thu, Oct. 29; Wed, Nov. 4; and Tue, Nov. 10 (11:00 a.m.-1:00 p.m. each day)",
+  "p[5]": "This semester, we're celebrating with you again under the theme 'NW2000 Party'! \
           Let the rich bass lines from music spanning the turn of the millennium massage your ears, \
           while you admire the artistry of our bartenders at the Physikerbar. 🍹",
-  "p[5]": "Prices: Cocktailse 5-7€, beer 3.50€, soft drinks 2€",
-  "p[6]": "There will also be pretzels, cheese sticks, and Leberkaes sandwiches (while supplies last).",
-  "p[7]": "SPECIALS: Beer for 2€ during the first hour and 5 shots for 5€, 11 shots for 10€ all night ^^",
-  "p[8]": "18+ only!!! ID check at the door! 🔞",
-  "p[9]": "We're looking forward to seeing you, so: Join us on Nov 12, 2026 to get this party started!",
-  "p[10]": "#NW2000Party #Music: everything since the turn of the millennium #NWIIBuilding #Bayreuth #UniBayreuth #UniParty #BestUniPartyBayreuth"
+  "p[6]": "Prices: Cocktailse 5-7€, beer 3.50€, soft drinks 2€",
+  "p[7]": "There will also be pretzels, cheese sticks, and Leberkaes sandwiches (while supplies last).",
+  "p[8]": "SPECIALS: Beer for 2€ during the first hour and 5 shots for 5€, 11 shots for 10€ all night ^^",
+  "p[9]": "18+ only!!! ID check at the door! 🔞",
+  "p[10]": "We're looking forward to seeing you, so: Join us on Nov 12, 2026 to get this party started!",
+  "p[11]": "#NW2000Party #Music: everything since the turn of the millennium #NWIIBuilding #Bayreuth #UniBayreuth #UniParty #BestUniPartyBayreuth"
 }
 </i18n>
